@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel de administración — Home Comfort</title>
+<style>
+:root{
+  --bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;--bg4:#222;
+  --gold:#c9a84c;--gold-light:#e0c872;--gold-dark:#a07e2e;--gold-glow:rgba(201,168,76,.25);
+  --text:#f5f5f7;--text-dim:#a1a1a6;--text-muted:#6e6e73;
+  --radius:18px;--radius-sm:12px;
+  --ok:#3ecf8e;--err:#ff6b6b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background:radial-gradient(circle at 50% 0%,#161410 0%,var(--bg) 60%);
+  color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;
+  padding:1.2rem;line-height:1.6;
+}
+.card{
+  width:100%;max-width:440px;background:var(--bg2);
+  border:1px solid rgba(201,168,76,.18);border-radius:var(--radius);
+  padding:2.2rem 2rem;box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+.brand{text-align:center;margin-bottom:1.8rem}
+.brand h1{font-family:Georgia,"Times New Roman",serif;font-size:1.5rem;font-weight:700;color:var(--gold-light);letter-spacing:1px}
+.brand .sub{font-size:.68rem;color:var(--text-muted);letter-spacing:3px;text-transform:uppercase;margin-top:.3rem}
+.brand .panel-tag{display:inline-block;margin-top:.9rem;font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);border-radius:50px;padding:.35rem 1rem}
+label{display:block;font-size:.78rem;font-weight:600;color:var(--text-dim);margin:1rem 0 .4rem;letter-spacing:.3px}
+input{
+  width:100%;background:var(--bg3);border:1px solid rgba(201,168,76,.15);
+  border-radius:var(--radius-sm);padding:.85rem 1rem;color:var(--text);
+  font-size:1rem;font-family:inherit;transition:border-color .2s,box-shadow .2s;
+}
+input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-glow)}
+input::placeholder{color:var(--text-muted)}
+.hint{font-size:.72rem;color:var(--text-muted);margin-top:.3rem}
+.pass-wrap{position:relative}
+.pass-wrap button.toggle{
+  position:absolute;right:.6rem;top:50%;transform:translateY(-50%);
+  background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:.72rem;
+  padding:.3rem .5rem;letter-spacing:.5px;
+}
+.btn{
+  width:100%;margin-top:1.6rem;background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light));
+  color:#0a0a0a;padding:.95rem;border:none;border-radius:var(--radius-sm);
+  font-size:.98rem;font-weight:700;cursor:pointer;letter-spacing:.5px;transition:transform .15s,box-shadow .2s,opacity .2s;
+}
+.btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 8px 30px var(--gold-glow)}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+.btn-ghost{
+  width:100%;margin-top:.7rem;background:transparent;color:var(--text-dim);
+  padding:.7rem;border:1px solid rgba(201,168,76,.2);border-radius:var(--radius-sm);
+  font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;
+}
+.btn-ghost:hover{background:rgba(201,168,76,.06);color:var(--gold-light);border-color:var(--gold)}
+.msg{margin-top:1.1rem;padding:.8rem 1rem;border-radius:var(--radius-sm);font-size:.85rem;display:none;line-height:1.5}
+.msg.show{display:block}
+.msg.ok{background:rgba(62,207,142,.1);border:1px solid rgba(62,207,142,.35);color:var(--ok)}
+.msg.err{background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.35);color:var(--err)}
+.hidden{display:none!important}
+.updated{font-size:.72rem;color:var(--text-muted);text-align:center;margin-top:1.2rem}
+.divider{height:1px;background:rgba(201,168,76,.12);margin:1.5rem 0}
+.field-note{font-size:.72rem;color:var(--gold);margin-top:.3rem;min-height:1em}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand">
+      <h1>Home Comfort</h1>
+      <div class="sub">Diseños de Interiores</div>
+      <div class="panel-tag">Panel de administración</div>
+    </div>
+
+    <!-- ====== LOGIN ====== -->
+    <form id="loginForm" autocomplete="off">
+      <label for="user">Usuario</label>
+      <input id="user" type="text" placeholder="admin" autocomplete="username">
+      <label for="pass">Contraseña</label>
+      <div class="pass-wrap">
+        <input id="pass" type="password" placeholder="••••••••" autocomplete="current-password">
+        <button type="button" class="toggle" id="togglePass">VER</button>
+      </div>
+      <button type="submit" class="btn" id="loginBtn">Ingresar</button>
+      <div class="msg err" id="loginMsg"></div>
+    </form>
+
+    <!-- ====== EDITOR ====== -->
+    <form id="editorForm" class="hidden" autocomplete="off">
+      <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:.4rem">Editá los datos para transferencia que ven los clientes en el checkout:</p>
+      <div class="divider"></div>
+
+      <label for="cbu">CBU / CVU</label>
+      <input id="cbu" type="text" inputmode="numeric" maxlength="22" placeholder="22 dígitos">
+      <div class="field-note" id="cbuNote"></div>
+
+      <label for="alias">Alias</label>
+      <input id="alias" type="text" maxlength="20" placeholder="mi.alias.banco">
+
+      <label for="titular">Titular de la cuenta</label>
+      <input id="titular" type="text" maxlength="60" placeholder="Nombre y apellido">
+
+      <button type="submit" class="btn" id="saveBtn">Guardar cambios</button>
+      <button type="button" class="btn-ghost" id="logoutBtn">Cerrar sesión</button>
+      <div class="msg" id="editorMsg"></div>
+      <div class="updated" id="updated"></div>
+    </form>
+  </div>
+
+<script>
+(function(){
+  "use strict";
+  var WORKER_URL = "https://home-comfort-admin.pazgenaro46.workers.dev";
+  var TOKEN_KEY = "hc_admin_token";
+
+  var $ = function(id){ return document.getElementById(id); };
+  var loginForm = $("loginForm"), editorForm = $("editorForm");
+  var loginMsg = $("loginMsg"), editorMsg = $("editorMsg");
+
+  function showMsg(el, text, type){
+    el.textContent = text;
+    el.className = "msg " + type + " show";
+  }
+  function hideMsg(el){ el.className = "msg"; }
+
+  function getToken(){ return sessionStorage.getItem(TOKEN_KEY); }
+  function setToken(t){ sessionStorage.setItem(TOKEN_KEY, t); }
+  function clearToken(){ sessionStorage.removeItem(TOKEN_KEY); }
+
+  // --- mostrar/ocultar contraseña ---
+  $("togglePass").addEventListener("click", function(){
+    var p = $("pass");
+    if(p.type === "password"){ p.type = "text"; this.textContent = "OCULTAR"; }
+    else { p.type = "password"; this.textContent = "VER"; }
+  });
+
+  // --- validación de CBU en vivo ---
+  $("cbu").addEventListener("input", function(){
+    this.value = this.value.replace(/\D/g, "").slice(0,22);
+    var note = $("cbuNote");
+    if(this.value.length === 0){ note.textContent = ""; note.style.color = "var(--gold)"; }
+    else if(this.value.length < 22){ note.textContent = this.value.length + "/22 dígitos"; note.style.color = "var(--text-muted)"; }
+    else { note.textContent = "✓ 22 dígitos"; note.style.color = "var(--ok)"; }
+  });
+
+  // --- vistas ---
+  function showLogin(){
+    editorForm.classList.add("hidden");
+    loginForm.classList.remove("hidden");
+  }
+  function showEditor(){
+    loginForm.classList.add("hidden");
+    editorForm.classList.remove("hidden");
+    loadBank();
+  }
+
+  // --- cargar datos actuales ---
+  function loadBank(){
+    fetch(WORKER_URL + "/api/bank", { cache: "no-store" })
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        $("cbu").value = d.cbu || "";
+        $("alias").value = d.alias || "";
+        $("titular").value = d.titular || "";
+        $("cbu").dispatchEvent(new Event("input"));
+        if(d.updatedAt){
+          $("updated").textContent = "Última actualización: " + new Date(d.updatedAt).toLocaleString("es-AR");
+        }
+      })
+      .catch(function(){ showMsg(editorMsg, "No se pudieron cargar los datos actuales.", "err"); });
+  }
+
+  // --- login ---
+  loginForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    hideMsg(loginMsg);
+    var btn = $("loginBtn");
+    btn.disabled = true; btn.textContent = "Ingresando…";
+    fetch(WORKER_URL + "/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ user: $("user").value.trim(), password: $("pass").value })
+    })
+    .then(function(r){ return r.json().then(function(d){ return { status: r.status, body: d }; }); })
+    .then(function(res){
+      if(res.status === 200 && res.body.token){
+        setToken(res.body.token);
+        $("pass").value = "";
+        showEditor();
+      } else {
+        showMsg(loginMsg, res.body.error || "No se pudo iniciar sesión.", "err");
+      }
+    })
+    .catch(function(){ showMsg(loginMsg, "Error de conexión. Revisá tu internet.", "err"); })
+    .finally(function(){ btn.disabled = false; btn.textContent = "Ingresar"; });
+  });
+
+  // --- guardar cambios ---
+  editorForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    hideMsg(editorMsg);
+    var cbu = $("cbu").value.trim(), alias = $("alias").value.trim(), titular = $("titular").value.trim();
+    if(!/^\d{22}$/.test(cbu)){ showMsg(editorMsg, "El CBU debe tener exactamente 22 dígitos.", "err"); return; }
+    if(alias.length < 6){ showMsg(editorMsg, "El alias debe tener al menos 6 caracteres.", "err"); return; }
+    if(titular.length < 3){ showMsg(editorMsg, "Ingresá el nombre del titular.", "err"); return; }
+
+    var btn = $("saveBtn");
+    btn.disabled = true; btn.textContent = "Guardando…";
+    fetch(WORKER_URL + "/api/bank", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Authorization": "Bearer " + getToken() },
+      body: JSON.stringify({ cbu: cbu, alias: alias, titular: titular })
+    })
+    .then(function(r){ return r.json().then(function(d){ return { status: r.status, body: d }; }); })
+    .then(function(res){
+      if(res.status === 200 && res.body.ok){
+        showMsg(editorMsg, "✓ Datos actualizados. Los clientes ya ven el nuevo CBU.", "ok");
+        if(res.body.updatedAt){
+          $("updated").textContent = "Última actualización: " + new Date(res.body.updatedAt).toLocaleString("es-AR");
+        }
+      } else if(res.status === 401){
+        clearToken();
+        showMsg(loginMsg, "Tu sesión venció. Iniciá sesión de nuevo.", "err");
+        showLogin();
+      } else {
+        showMsg(editorMsg, res.body.error || "No se pudo guardar.", "err");
+      }
+    })
+    .catch(function(){ showMsg(editorMsg, "Error de conexión. Intentá de nuevo.", "err"); })
+    .finally(function(){ btn.disabled = false; btn.textContent = "Guardar cambios"; });
+  });
+
+  // --- logout ---
+  $("logoutBtn").addEventListener("click", function(){
+    clearToken();
+    hideMsg(editorMsg);
+    showLogin();
+  });
+
+  // --- estado inicial ---
+  if(getToken()){ showEditor(); } else { showLogin(); }
+})();
+</script>
+</body>
+</html>
