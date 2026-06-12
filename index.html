@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOME COMFORT — Tocadores Hollywood, Paneles TV y Espejos LED | Diseños de Interiores</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Home Comfort — Tienda online de muebles de diseño de interiores. Tocadores Hollywood con luces LED, paneles TV, espejos de cuerpo entero, centros de belleza y sillas. Fabricación propia, envíos a todo el país. Depósito en Saladillo, Provincia de Buenos Aires.">
+<meta name="keywords" content="tocadores Hollywood, muebles de diseño, espejos LED, paneles TV, centro de belleza, muebles a medida, diseño de interiores, Home Comfort, tocador con luces, espejo cuerpo entero, muebles Buenos Aires, Saladillo, Argentina">
+<meta name="author" content="Home Comfort - Diseños de Interiores">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0a0a">
+
+<!-- Open Graph (Facebook, WhatsApp, Messenger) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="HOME COMFORT — Diseños de Interiores">
+<meta property="og:description" content="Tocadores Hollywood, paneles TV, espejos LED y muebles de diseño. Fabricación propia con envíos a todo el país.">
+<meta property="og:image" content="img/logohome.jpeg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="800">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Home Comfort">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HOME COMFORT — Diseños de Interiores">
+<meta name="twitter:description" content="Tocadores Hollywood, paneles TV, espejos LED y muebles de diseño. Fabricación propia con envíos a todo el país.">
+<meta name="twitter:image" content="img/logohome.jpeg">
+
+<!-- Favicons -->
+<link rel="icon" type="image/jpeg" href="img/logohome.jpeg">
+<link rel="apple-touch-icon" href="img/logohome.jpeg">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/*========== RESET & ROOT ==========*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;--bg4:#222;
+  --gold:#c9a84c;--gold-light:#e0c872;--gold-dark:#a07e2e;--gold-glow:rgba(201,168,76,.25);
+  --text:#f5f5f7;--text-dim:#a1a1a6;--text-muted:#6e6e73;
+  --card-bg:rgba(28,28,30,.85);--card-border:rgba(60,55,45,.4);
+  --radius:18px;--radius-sm:12px;
+  --transition:all .35s cubic-bezier(.4,0,.2,1);
+  --font-display:'Playfair Display',serif;
+  --font-body:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;border:none;font-family:inherit}
+img{max-width:100%;display:block}
+
+/*========== CUSTOM CURSOR (desktop only) ==========*/
+@media(pointer:fine){
+  *{cursor:none!important}
+  .custom-cursor{position:fixed;top:0;left:0;width:20px;height:20px;border:2px solid var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transition:width .25s ease,height .25s ease,border-color .25s ease,background .25s ease,transform .1s ease;transform:translate(-50%,-50%);mix-blend-mode:difference}
+  .custom-cursor.hover{width:45px;height:45px;background:rgba(201,168,76,.12);border-color:var(--gold-light)}
+  .cursor-dot{position:fixed;top:0;left:0;width:5px;height:5px;background:var(--gold-light);border-radius:50%;pointer-events:none;z-index:10000;transform:translate(-50%,-50%);transition:opacity .2s ease}
+}
+
+/*========== AMBIENT PARTICLES ==========*/
+#particles{position:fixed;inset:0;z-index:0;pointer-events:none}
+
+/*========== SCROLL PROGRESS BAR ==========*/
+.scroll-progress{position:fixed;top:34px;left:0;width:0%;height:2px;background:linear-gradient(90deg,var(--gold-dark),var(--gold),var(--gold-light));z-index:1001;transition:none;box-shadow:0 0 8px var(--gold-glow)}
+
+/*========== PROMO BAR ==========*/
+.promo-bar{position:fixed;top:0;left:0;right:0;height:34px;z-index:1002;background:linear-gradient(90deg,var(--gold-dark),var(--gold),var(--gold-light));color:#0a0a0a;display:flex;align-items:center;justify-content:center;gap:.9rem;font-size:.72rem;font-weight:700;letter-spacing:.4px;padding:0 1rem;overflow:hidden;white-space:nowrap}
+.promo-bar i{margin-right:.3rem}
+.promo-sep{opacity:.45}
+@media(max-width:860px){.promo-bar{font-size:.66rem;gap:.7rem}.promo-bar .promo-hide{display:none}}
+
+/*========== HEADER ==========*/
+.header{position:fixed;top:34px;left:0;right:0;z-index:1000;background:rgba(10,10,10,.88);backdrop-filter:blur(24px);border-bottom:1px solid rgba(201,168,76,.15);padding:0 2rem;height:72px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;transition:var(--transition)}
+.header.scrolled{background:rgba(10,10,10,.96);box-shadow:0 4px 30px rgba(0,0,0,.5)}
+.header-left{display:flex;align-items:center;justify-content:flex-start}
+.logo-wrap{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.logo-wrap img{height:48px;border-radius:50%;border:1px solid rgba(201,168,76,.3)}
+.logo-text{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--gold-light);letter-spacing:2px}
+.logo-sub{font-size:.6rem;color:var(--text-muted);letter-spacing:3px;text-transform:uppercase;font-family:var(--font-body);font-weight:400}
+.nav-links{display:none}
+.header-center{display:flex;align-items:center;justify-content:center}
+.header-right{display:flex;align-items:center;justify-content:flex-end;gap:1rem}
+.cart-btn{position:relative;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:50%;width:46px;height:46px;display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:1.1rem;transition:var(--transition)}
+.cart-btn:hover{background:rgba(201,168,76,.15);border-color:var(--gold);box-shadow:0 0 20px var(--gold-glow)}
+.cart-badge{position:absolute;top:-3px;right:-3px;background:var(--gold);color:#0a0a0a;font-size:.65rem;font-weight:800;width:20px;height:20px;border-radius:50%;display:none;align-items:center;justify-content:center}
+.cart-badge.show{display:flex}
+.mobile-menu{display:block;background:none;color:var(--gold-light);font-size:1.4rem;width:44px;height:44px;position:relative;display:flex;align-items:center;justify-content:center}
+.hamburger{width:22px;height:16px;position:relative;display:flex;flex-direction:column;justify-content:space-between}
+.hamburger span{display:block;width:100%;height:2px;background:var(--gold-light);border-radius:2px;transition:all .35s cubic-bezier(.4,0,.2,1);transform-origin:center}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/*========== MOBILE NAV ==========*/
+.mobile-nav{display:none;position:fixed;top:106px;left:0;right:0;background:rgba(10,10,10,.98);backdrop-filter:blur(30px);z-index:999;padding:1.5rem 2rem;flex-direction:column;gap:1.2rem;border-bottom:1px solid rgba(201,168,76,.15)}
+.mobile-nav.open{display:flex}
+.mobile-nav a{color:var(--text-dim);font-size:1rem;font-weight:500;padding:.5rem 0;transition:var(--transition)}
+.mobile-nav a:hover{color:var(--gold-light)}
+
+/*========== HERO ==========*/
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;z-index:1;overflow:hidden;padding:130px 2rem 40px}
+.hero::before{content:'';position:absolute;inset:0;background:url('img/photo_2026-03-31 04.53.36.jpeg') center/cover no-repeat;opacity:.2;z-index:-2}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.6) 0%,rgba(10,10,10,.2) 40%,rgba(10,10,10,.6) 75%,rgba(10,10,10,1) 100%);z-index:-1}
+.hero-content{text-align:center;max-width:900px}
+.hero-badge{display:inline-block;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);border-radius:50px;padding:.5rem 1.5rem;font-size:.75rem;font-weight:600;color:var(--gold-light);letter-spacing:2px;text-transform:uppercase;margin-bottom:2rem}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.8rem,7vw,5.5rem);font-weight:800;line-height:1.05;margin-bottom:1.5rem;background:linear-gradient(135deg,#fff 0%,var(--gold-light) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:1.15rem;color:var(--text-dim);max-width:600px;margin:0 auto 2.5rem;line-height:1.8}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-gold{display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light));color:#0a0a0a;padding:.9rem 2.2rem;border-radius:var(--radius-sm);font-size:.95rem;font-weight:700;transition:var(--transition);border:none;letter-spacing:.5px}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 35px var(--gold-glow)}
+.btn-ghost{display:inline-flex;align-items:center;gap:.6rem;background:transparent;color:var(--gold-light);padding:.9rem 2.2rem;border-radius:var(--radius-sm);font-size:.95rem;font-weight:600;transition:var(--transition);border:1px solid rgba(201,168,76,.3)}
+.btn-ghost:hover{background:rgba(201,168,76,.08);border-color:var(--gold);transform:translateY(-3px)}
+
+/*========== SECTIONS ==========*/
+.section{padding:100px 2rem;position:relative;z-index:1}
+.section-header{text-align:center;margin-bottom:4rem}
+.section-header .label{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem}
+.section-header h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:1rem;background:linear-gradient(135deg,#fff,var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-header p{color:var(--text-dim);max-width:600px;margin:0 auto;font-size:1rem}
+.container{max-width:1400px;margin:0 auto}
+
+/*========== CATEGORY FILTERS ==========*/
+.filters{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-bottom:3rem}
+.filter-btn{padding:.55rem 1.4rem;border-radius:50px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);color:var(--text-dim);font-size:.85rem;font-weight:500;transition:var(--transition);letter-spacing:.3px}
+.filter-btn:hover,.filter-btn.active{background:rgba(201,168,76,.15);color:var(--gold-light);border-color:var(--gold);box-shadow:0 0 15px rgba(201,168,76,.1)}
+
+/*========== PRODUCT GRID ==========*/
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:2rem}
+
+/*========== PRODUCT CARD ==========*/
+.product-card{background:var(--card-bg);backdrop-filter:blur(12px);border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;transition:var(--transition);animation:float 5s ease-in-out infinite;position:relative}
+.product-card:nth-child(2n){animation-delay:-.8s}
+.product-card:nth-child(3n){animation-delay:-1.6s}
+.product-card:nth-child(4n){animation-delay:-2.4s}
+.product-card:nth-child(5n){animation-delay:-3.2s}
+.product-card:nth-child(6n){animation-delay:-4s}
+.product-card:hover{border-color:rgba(201,168,76,.4);transform:translateY(-10px) scale(1.02);box-shadow:0 20px 60px rgba(201,168,76,.12),0 0 0 1px rgba(201,168,76,.2)}
+.product-card:hover{animation-play-state:paused}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.product-badge{position:absolute;top:16px;left:16px;padding:5px 14px;border-radius:50px;font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;z-index:2;background:rgba(201,168,76,.15);color:var(--gold-light);border:1px solid rgba(201,168,76,.3);backdrop-filter:blur(8px)}
+.product-img-wrap{position:relative;height:280px;overflow:hidden;background:#141414}
+.product-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.product-card:hover .product-img-wrap img{transform:scale(1.08)}
+.product-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,10,10,.8) 100%);pointer-events:none}
+.product-body{padding:1.5rem}
+.product-name{font-family:var(--font-display);font-size:1.15rem;font-weight:700;margin-bottom:.3rem;color:#fff}
+.product-desc{font-size:.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.5}
+.product-label{font-size:.65rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:.4rem}
+.variant-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.variant-btn{padding:.35rem .85rem;border-radius:8px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.12);color:var(--text-dim);font-size:.8rem;font-weight:500;transition:var(--transition)}
+.variant-btn:hover,.variant-btn.active{background:rgba(201,168,76,.18);color:var(--gold-light);border-color:var(--gold)}
+.color-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.color-swatch{width:26px;height:26px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:var(--transition);position:relative}
+.color-swatch:hover,.color-swatch.active{border-color:var(--gold);transform:scale(1.15);box-shadow:0 0 12px var(--gold-glow)}
+.color-swatch.active::after{content:'\2713';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.55rem;color:#fff;text-shadow:0 0 3px rgba(0,0,0,.8)}
+.product-price{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--gold-light);margin-bottom:1rem;text-shadow:0 0 20px rgba(201,168,76,.3)}
+.product-price.consultar{font-size:1rem;color:var(--text-dim)}
+.btn-cart{width:100%;padding:.75rem;border-radius:var(--radius-sm);background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(201,168,76,.06));border:1px solid rgba(201,168,76,.2);color:var(--gold-light);font-size:.9rem;font-weight:600;transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:.5rem}
+.btn-cart:hover{background:linear-gradient(135deg,rgba(201,168,76,.25),rgba(201,168,76,.15));border-color:var(--gold);box-shadow:0 4px 20px rgba(201,168,76,.15)}
+
+/*========== FEATURES STRIP ==========*/
+.features-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:5rem}
+.feature-card{background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.1);border-radius:var(--radius);padding:2rem 1.5rem;text-align:center;transition:var(--transition)}
+.feature-card:hover{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.25);transform:translateY(-4px)}
+.feature-card i{font-size:2rem;color:var(--gold);margin-bottom:1rem;display:block}
+.feature-card h4{font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin-bottom:.5rem;color:#fff}
+.feature-card p{font-size:.85rem;color:var(--text-dim);line-height:1.6}
+
+/*========== ABOUT ==========*/
+.about-section{position:relative;overflow:hidden}
+.about-section::before{content:'';position:absolute;inset:0;background:none;z-index:0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
+.about-img{border-radius:var(--radius);overflow:hidden;border:1px solid var(--card-border)}
+.about-img img{width:100%;height:400px;object-fit:cover}
+.about-text h3{font-family:var(--font-display);font-size:2rem;font-weight:800;margin-bottom:1rem}
+.about-text h3 span{color:var(--gold-light)}
+.about-text p{color:var(--text-dim);margin-bottom:1.5rem;line-height:1.8}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.stat{text-align:center;padding:1.2rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.1);border-radius:var(--radius-sm)}
+.stat .num{font-family:var(--font-display);font-size:1.8rem;font-weight:800;color:var(--gold-light)}
+.stat .lbl{font-size:.75rem;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;margin-top:.2rem}
+
+/*========== PAYMENT METHODS ==========*/
+.payment-section{text-align:center}
+.payment-grid{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:2rem}
+.pay-card{display:flex;flex-direction:column;align-items:center;gap:.6rem;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.1);border-radius:var(--radius);padding:1.5rem 2.5rem;min-width:150px;transition:var(--transition)}
+.pay-card:hover{background:rgba(201,168,76,.1);border-color:rgba(201,168,76,.3);transform:translateY(-4px)}
+.pay-card i{font-size:1.8rem;color:var(--gold)}
+.pay-card span{font-size:.8rem;font-weight:600;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase}
+
+/*========== FOOTER ==========*/
+.footer{background:var(--bg2);border-top:1px solid rgba(201,168,76,.1);padding:3rem 2rem;text-align:center;position:relative;z-index:1}
+.footer-logo{height:50px;border-radius:50%;margin:0 auto 1rem}
+.footer p{color:var(--text-muted);font-size:.85rem;margin-bottom:.5rem}
+.footer-links{display:flex;justify-content:center;gap:2rem;margin-top:1rem}
+.footer-links a{color:var(--text-dim);font-size:1.3rem;transition:var(--transition)}
+.footer-links a:hover{color:var(--gold-light)}
+
+/*========== CART DRAWER ==========*/
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:2000;opacity:0;visibility:hidden;transition:var(--transition)}
+.cart-overlay.open{opacity:1;visibility:visible}
+.cart-drawer{position:fixed;top:0;right:0;bottom:0;width:440px;max-width:92vw;background:var(--bg2);z-index:2001;transform:translateX(100%);transition:transform .45s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;border-left:1px solid rgba(201,168,76,.15)}
+.cart-drawer.open{transform:translateX(0)}
+.cart-header{padding:1.5rem;border-bottom:1px solid rgba(201,168,76,.1);display:flex;justify-content:space-between;align-items:center}
+.cart-header h3{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--gold-light)}
+.cart-close{background:none;color:var(--text-dim);font-size:1.3rem;transition:var(--transition)}
+.cart-close:hover{color:var(--gold-light)}
+.cart-items{flex:1;overflow-y:auto;padding:1rem 1.5rem}
+.cart-empty{text-align:center;padding:3rem 1rem;color:var(--text-muted)}
+.cart-empty i{font-size:3rem;color:rgba(201,168,76,.3);margin-bottom:1rem;display:block}
+.cart-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(201,168,76,.08)}
+.cart-item-img{width:70px;height:70px;object-fit:cover;border-radius:10px;border:1px solid var(--card-border)}
+.cart-item-info{flex:1}
+.cart-item-name{font-size:.9rem;font-weight:600;color:#fff}
+.cart-item-variant{font-size:.78rem;color:var(--text-muted);margin-top:2px}
+.cart-item-price{font-size:.95rem;font-weight:700;color:var(--gold-light);margin-top:4px}
+.cart-item-actions{display:flex;align-items:center;gap:.6rem;margin-top:.5rem}
+.cart-item-actions button{width:26px;height:26px;border-radius:6px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.15);color:var(--gold-light);font-size:.8rem;display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+.cart-item-actions button:hover{background:rgba(201,168,76,.2)}
+.cart-item-actions span{font-size:.85rem;font-weight:600;min-width:20px;text-align:center}
+.cart-item-remove{background:none!important;border:none!important;color:var(--text-muted)!important;font-size:.85rem;margin-left:auto;transition:var(--transition)}
+.cart-item-remove:hover{color:#e74c3c!important}
+.cart-footer{padding:1.5rem;border-top:1px solid rgba(201,168,76,.15)}
+.cart-total{display:flex;justify-content:space-between;margin-bottom:1rem;font-size:1.15rem;font-weight:700}
+.cart-total span:last-child{color:var(--gold-light)}
+.btn-checkout{width:100%;padding:.95rem;background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light));color:#0a0a0a;border-radius:var(--radius-sm);font-size:1rem;font-weight:800;transition:var(--transition);border:none;letter-spacing:.5px}
+.btn-checkout:hover{box-shadow:0 8px 30px var(--gold-glow);transform:translateY(-2px)}
+
+/*========== CHECKOUT MODAL ==========*/
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:3000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:var(--transition);padding:1rem}
+.modal-overlay.open{opacity:1;visibility:visible}
+.modal{background:var(--bg2);border:1px solid rgba(201,168,76,.2);border-radius:var(--radius);width:100%;max-width:550px;max-height:90vh;overflow-y:auto;padding:2.5rem;transform:scale(.95);transition:var(--transition)}
+.modal-overlay.open .modal{transform:scale(1)}
+.modal h3{font-family:var(--font-display);font-size:1.5rem;font-weight:800;margin-bottom:1.5rem;text-align:center;color:var(--gold-light)}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-size:.82rem;font-weight:600;margin-bottom:.4rem;color:var(--text-dim)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:.75rem 1rem;background:var(--bg3);border:1px solid rgba(201,168,76,.12);border-radius:var(--radius-sm);color:var(--text);font-size:.9rem;transition:var(--transition)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.1)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.order-summary{background:var(--bg3);border:1px solid rgba(201,168,76,.1);border-radius:var(--radius-sm);padding:1.2rem;margin-bottom:1.5rem}
+.order-summary h4{font-size:.9rem;font-weight:700;color:var(--gold-light);margin-bottom:.8rem}
+.order-line{display:flex;justify-content:space-between;font-size:.82rem;color:var(--text-dim);padding:.3rem 0}
+.order-line.total{border-top:1px solid rgba(201,168,76,.1);margin-top:.5rem;padding-top:.7rem;font-weight:700;color:var(--gold-light);font-size:.95rem}
+.btn-whatsapp{width:100%;padding:1rem;background:#25D366;color:#fff;border-radius:var(--radius-sm);font-size:1rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:.6rem;transition:var(--transition);border:none;margin-top:1rem}
+.btn-whatsapp:hover{background:#20bd5a;transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,211,102,.3)}
+
+/*========== PAYMENT METHOD BUTTONS ==========*/
+.pay-method-btn{width:100%;display:flex;align-items:center;gap:1rem;padding:1.2rem 1.3rem;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.12);border-radius:var(--radius-sm);cursor:pointer;transition:var(--transition);margin-bottom:.8rem;text-align:left}
+.pay-method-btn:hover{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.25)}
+.pay-method-btn.selected{background:rgba(201,168,76,.12);border-color:var(--gold);box-shadow:0 0 20px rgba(201,168,76,.1)}
+.pay-method-icon{width:48px;height:48px;border-radius:12px;background:rgba(201,168,76,.1);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--gold);flex-shrink:0;transition:var(--transition)}
+.pay-method-btn.selected .pay-method-icon{background:var(--gold);color:#0a0a0a}
+.pay-method-info{flex:1}
+.pay-method-title{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:.2rem}
+.pay-method-desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.pay-method-check{width:22px;height:22px;border-radius:50%;border:2px solid rgba(201,168,76,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--transition)}
+.pay-method-check i{font-size:.5rem;color:transparent;transition:var(--transition)}
+.pay-method-btn.selected .pay-method-check{border-color:var(--gold);background:var(--gold)}
+.pay-method-btn.selected .pay-method-check i{color:#0a0a0a;font-size:.6rem}
+
+/*========== CARD VISUAL ==========*/
+.card-visual{width:100%;height:190px;border-radius:18px;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);border:1px solid rgba(201,168,76,.3);padding:1.5rem 1.8rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;margin-bottom:1.5rem;box-shadow:0 15px 40px rgba(0,0,0,.5)}
+.card-visual::before{content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;border-radius:50%;background:rgba(201,168,76,.06);pointer-events:none}
+.card-visual::after{content:'';position:absolute;bottom:-40px;left:-20px;width:180px;height:180px;border-radius:50%;background:rgba(201,168,76,.04);pointer-events:none}
+.card-chip{width:42px;height:32px;border-radius:6px;background:linear-gradient(135deg,var(--gold-dark),var(--gold-light));display:flex;align-items:center;justify-content:center;position:relative}
+.card-chip::before{content:'';position:absolute;width:28px;height:20px;border:1.5px solid rgba(0,0,0,.3);border-radius:3px}
+.card-chip::after{content:'';position:absolute;width:0;height:20px;border-left:1.5px solid rgba(0,0,0,.2)}
+.card-top{display:flex;align-items:center;justify-content:space-between}
+.card-network{font-size:1.4rem;color:rgba(255,255,255,.7)}
+.card-number-display{font-family:'Courier New',monospace;font-size:1.2rem;letter-spacing:4px;color:#fff;text-align:center;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.card-bottom{display:flex;justify-content:space-between;align-items:flex-end}
+.card-label-sm{font-size:.55rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:2px}
+.card-holder-display{font-size:.85rem;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:2px;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.card-exp-display{font-size:.85rem;font-weight:600;color:#fff;letter-spacing:2px}
+.card-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.card-input-wrap{position:relative}
+.card-input-wrap i{position:absolute;right:.9rem;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:.9rem;pointer-events:none}
+#cardData input:focus,#cardData select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.1)}
+
+/*========== THANK YOU ==========*/
+.thankyou{text-align:center;padding:2rem}
+.thankyou i{font-size:4rem;color:var(--gold);margin-bottom:1rem}
+.thankyou h3{font-family:var(--font-display);font-size:1.6rem;font-weight:800;margin-bottom:1rem;color:var(--gold-light)}
+.thankyou p{color:var(--text-dim);line-height:1.8}
+
+/*========== SCROLL ANIMATIONS ==========*/
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/*========== FLOATING WHATSAPP BUTTON ==========*/
+.float-wa{position:fixed;bottom:28px;right:28px;z-index:900;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;box-shadow:0 4px 20px rgba(37,211,102,.45);transition:var(--transition);text-decoration:none}
+.float-wa:hover{transform:scale(1.12) translateY(-3px);background:#20bd5a;box-shadow:0 8px 30px rgba(37,211,102,.55)}
+
+/*========== TESTIMONIALS ==========*/
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem}
+.testimonial-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius);padding:1.8rem;transition:var(--transition)}
+.testimonial-card:hover{border-color:rgba(201,168,76,.3);transform:translateY(-5px);box-shadow:0 12px 35px rgba(201,168,76,.08)}
+.testimonial-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.testimonial-avatar{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dark),var(--gold));display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;color:#0a0a0a}
+.testimonial-name{font-weight:600;font-size:.95rem}
+.testimonial-city{color:var(--text-muted);font-size:.78rem;margin-top:1px}
+.testimonial-stars{color:#f5a623;margin-bottom:.8rem;font-size:.9rem;letter-spacing:2px}
+.testimonial-text{color:var(--text-dim);font-size:.9rem;line-height:1.8;font-style:italic}
+
+/*========== HOW TO BUY ==========*/
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;position:relative}
+.step-card{text-align:center;padding:2rem 1.5rem;background:rgba(201,168,76,.03);border:1px solid rgba(201,168,76,.1);border-radius:var(--radius);position:relative;transition:var(--transition)}
+.step-card:hover{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.25);transform:translateY(-5px)}
+.step-number{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light));color:#0a0a0a;font-family:var(--font-display);font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem}
+.step-card i.step-icon{font-size:1.8rem;color:var(--gold);display:block;margin-bottom:.8rem}
+.step-card h4{font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin-bottom:.5rem;color:#fff}
+.step-card p{font-size:.85rem;color:var(--text-dim);line-height:1.6}
+.step-arrow{display:none;position:absolute;top:50%;right:-1.5rem;transform:translateY(-50%);color:rgba(201,168,76,.3);font-size:1.2rem}
+@media(min-width:960px){
+  .step-arrow{display:block}
+}
+
+/*========== FAQ ==========*/
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{border:1px solid rgba(201,168,76,.1);border-radius:var(--radius-sm);margin-bottom:.8rem;overflow:hidden;transition:var(--transition)}
+.faq-item:hover{border-color:rgba(201,168,76,.25)}
+.faq-item.open{border-color:rgba(201,168,76,.3)}
+.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.5rem;background:rgba(201,168,76,.04);color:var(--text);font-size:.95rem;font-weight:600;text-align:left;transition:var(--transition);gap:1rem}
+.faq-question:hover{background:rgba(201,168,76,.08)}
+.faq-question i{color:var(--gold);font-size:.8rem;transition:transform .3s ease;flex-shrink:0}
+.faq-item.open .faq-question i{transform:rotate(180deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1),padding .4s ease}
+.faq-answer-inner{padding:0 1.5rem 1.3rem;color:var(--text-dim);font-size:.9rem;line-height:1.8}
+
+/*========== LIGHTBOX ==========*/
+.lightbox-overlay{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:4000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;padding:2rem;cursor:zoom-out}
+.lightbox-overlay.open{opacity:1;visibility:visible}
+.lightbox-overlay img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:var(--radius);box-shadow:0 20px 80px rgba(201,168,76,.15);transform:scale(.92);transition:transform .4s cubic-bezier(.4,0,.2,1)}
+.lightbox-overlay.open img{transform:scale(1)}
+.lightbox-close{position:absolute;top:24px;right:28px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:1.2rem;cursor:pointer;transition:var(--transition);z-index:1}
+.lightbox-close:hover{background:rgba(201,168,76,.3);transform:scale(1.1)}
+.lightbox-caption{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);background:rgba(10,10,10,.8);backdrop-filter:blur(12px);border:1px solid rgba(201,168,76,.15);border-radius:50px;padding:.6rem 1.8rem;font-size:.85rem;color:var(--gold-light);font-weight:500;white-space:nowrap}
+.product-img-wrap{cursor:zoom-in}
+.product-img-wrap:hover>div:last-child{opacity:1!important}
+
+/*========== FEATURED PRODUCTS ==========*/
+.featured-scroll{display:flex;gap:1.5rem;overflow-x:auto;padding-bottom:1rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.featured-scroll::-webkit-scrollbar{display:none}
+.featured-card{flex:0 0 300px;scroll-snap-align:start;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;transition:var(--transition);position:relative}
+.featured-card:hover{border-color:rgba(201,168,76,.4);transform:translateY(-6px);box-shadow:0 16px 50px rgba(201,168,76,.12)}
+.featured-card .feat-img{height:220px;overflow:hidden}
+.featured-card .feat-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.featured-card:hover .feat-img img{transform:scale(1.06)}
+.featured-card .feat-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,10,10,.85) 100%);pointer-events:none}
+.featured-card .feat-body{position:absolute;bottom:0;left:0;right:0;padding:1.5rem;z-index:1}
+.featured-card .feat-badge{display:inline-block;background:rgba(201,168,76,.2);border:1px solid rgba(201,168,76,.35);border-radius:50px;padding:3px 12px;font-size:.6rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-light);margin-bottom:.5rem}
+.featured-card .feat-name{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:.3rem}
+.featured-card .feat-price{font-family:var(--font-display);font-size:1.2rem;font-weight:800;color:var(--gold-light)}
+.featured-card .feat-btn{display:inline-flex;align-items:center;gap:.4rem;margin-top:.6rem;background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:#0a0a0a;padding:.45rem 1rem;border-radius:8px;font-size:.78rem;font-weight:700;transition:var(--transition);border:none;cursor:pointer}
+.featured-card .feat-btn:hover{box-shadow:0 4px 15px var(--gold-glow);transform:translateY(-1px)}
+.featured-nav{display:flex;justify-content:center;gap:.8rem;margin-top:1.5rem}
+.featured-nav button{width:36px;height:36px;border-radius:50%;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);color:var(--gold-light);font-size:.85rem;display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+.featured-nav button:hover{background:rgba(201,168,76,.2);border-color:var(--gold)}
+
+/*========== SCROLLBAR ==========*/
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:rgba(201,168,76,.3);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--gold)}
+
+/*========== RESPONSIVE ==========*/
+@media(max-width:1024px){
+  .nav-links{display:none}
+  .about-grid{grid-template-columns:1fr;text-align:center}
+  .about-img img{height:300px}
+  .about-stats{max-width:400px;margin:0 auto}
+}
+@media(max-width:768px){
+  .header{padding:0 1rem;height:64px}
+  .logo-wrap img{height:40px}
+  .logo-text{font-size:1rem}
+  .hero{min-height:auto;padding:100px 1rem 60px}
+  .section{padding:60px 1rem}
+  .products-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem}
+  .product-img-wrap{height:220px}
+  .cart-drawer{width:100%;max-width:100%}
+  .form-row{grid-template-columns:1fr}
+  .features-strip{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .hero h1{font-size:2.2rem}
+  .hero p{font-size:.95rem}
+  .products-grid{grid-template-columns:1fr}
+  .product-img-wrap{height:240px}
+  .features-strip{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:center}
+  .btn-gold,.btn-ghost{width:100%;justify-content:center}
+  .payment-grid{flex-direction:column;align-items:center}
+}
+
+/*========== PRICE / DISCOUNT ==========*/
+.price-old{font-family:var(--font-body);font-size:.95rem;font-weight:600;color:var(--text-muted);text-decoration:line-through;text-shadow:none;margin-right:.15rem}
+.discount-badge{font-family:var(--font-body);font-size:.68rem;font-weight:800;color:#fff;background:#e74c3c;padding:3px 9px;border-radius:50px;letter-spacing:.5px;text-shadow:none;vertical-align:middle;margin-left:.2rem}
+.product-offer{position:absolute;top:16px;right:16px;padding:5px 12px;border-radius:50px;font-size:.62rem;font-weight:800;letter-spacing:1px;z-index:2;background:#e74c3c;color:#fff;box-shadow:0 4px 14px rgba(231,76,60,.4)}
+
+/*========== CONSULTAR WHATSAPP (producto) ==========*/
+.btn-consultar{width:100%;padding:.6rem;margin-top:.55rem;border-radius:var(--radius-sm);background:transparent;border:1px solid rgba(37,211,102,.4);color:#25D366;font-size:.82rem;font-weight:600;transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none}
+.btn-consultar:hover{background:rgba(37,211,102,.12);border-color:#25D366}
+
+/*========== TRUST ROW (checkout) ==========*/
+.trust-row{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;margin:1.2rem 0;padding:1rem .6rem;background:var(--bg3);border:1px solid rgba(201,168,76,.1);border-radius:var(--radius-sm)}
+.trust-item{display:flex;flex-direction:column;align-items:center;gap:.35rem;font-size:.64rem;color:var(--text-muted);font-weight:600;text-align:center;flex:1;min-width:78px}
+.trust-item i{font-size:1.15rem;color:var(--gold)}
+
+/*========== TESTIMONIAL VERIFIED ==========*/
+.testimonial-verified{display:inline-flex;align-items:center;gap:.3rem;font-size:.68rem;color:#25D366;font-weight:600;margin-bottom:.6rem}
+
+/*========== BACK TO TOP ==========*/
+.back-to-top{position:fixed;bottom:92px;right:28px;z-index:899;width:46px;height:46px;border-radius:50%;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1rem;opacity:0;visibility:hidden;transition:var(--transition);backdrop-filter:blur(8px)}
+.back-to-top.show{opacity:1;visibility:visible}
+.back-to-top:hover{background:rgba(201,168,76,.25);border-color:var(--gold);transform:translateY(-3px)}
+</style>
+</head>
+<body>
+
+<!-- PROMO BAR -->
+<div class="promo-bar">
+  <span><i class="fas fa-truck"></i>Envío a todo el país</span>
+  <span class="promo-sep">•</span>
+  <span><i class="fas fa-credit-card"></i>Cuotas disponibles</span>
+  <span class="promo-sep promo-hide">•</span>
+  <span class="promo-hide"><i class="fas fa-bolt"></i>Fabricación propia</span>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="custom-cursor" id="customCursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<canvas id="particles"></canvas>
+
+<!-- HEADER -->
+<header class="header" id="mainHeader">
+  <div class="header-left">
+    <button class="cart-btn" onclick="toggleCart()">
+      <i class="fas fa-shopping-bag"></i>
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+  </div>
+  <div class="header-center">
+    <a href="#" class="logo-wrap">
+      <img src="img/logohome.jpeg" alt="Home Comfort">
+      <div>
+        <div class="logo-text">HOME COMFORT</div>
+        <div class="logo-sub">Diseños de Interiores</div>
+      </div>
+    </a>
+  </div>
+  <div class="header-right">
+    <button class="mobile-menu" onclick="toggleMobileNav()"><div class="hamburger" id="hamburgerIcon"><span></span><span></span><span></span></div></button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#productos" onclick="closeMobileNav()">Productos</a>
+  <a href="#como-comprar" onclick="closeMobileNav()">Cómo Comprar</a>
+  <a href="#testimonios" onclick="closeMobileNav()">Testimonios</a>
+  <a href="#faq" onclick="closeMobileNav()">Preguntas Frecuentes</a>
+  <a href="#nosotros" onclick="closeMobileNav()">Nosotros</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Colección 2026</div>
+    <h1>Elegancia para tu hogar</h1>
+    <p>Tocadores Hollywood, paneles TV, espejos LED y muebles de diseño. Creamos espacios que inspiran, con la calidad y el estilo que merecés.</p>
+    <div class="hero-btns">
+      <a href="#productos" class="btn-gold"><i class="fas fa-gem"></i> Ver Colección</a>
+      <a href="https://wa.me/5491124882908" target="_blank" class="btn-ghost"><i class="fab fa-whatsapp"></i> Consultar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED / BEST SELLERS -->
+<section class="section" id="destacados" style="padding-top:60px;padding-bottom:60px">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Los Más Elegidos</div>
+      <h2>Productos Destacados</h2>
+      <p>Los favoritos de nuestros clientes para que empieces a explorar</p>
+    </div>
+    <div class="featured-scroll" id="featuredScroll"></div>
+    <div class="featured-nav">
+      <button onclick="scrollFeatured(-1)"><i class="fas fa-chevron-left"></i></button>
+      <button onclick="scrollFeatured(1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="productos">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Nuestra Colección</div>
+      <h2>Muebles de Diseño</h2>
+      <p>Cada pieza está pensada para transformar tu espacio en un lugar único y sofisticado</p>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="products-grid" id="productsGrid"></div>
+
+    <!-- FEATURES -->
+    <div class="features-strip">
+      <div class="feature-card fade-in">
+        <i class="fas fa-truck"></i>
+        <h4>Envío a Todo el País</h4>
+        <p>Envíos seguros con embalaje reforzado y seguimiento en tiempo real</p>
+      </div>
+      <div class="feature-card fade-in">
+        <i class="fas fa-tools"></i>
+        <h4>Fabricación Propia</h4>
+        <p>Cada mueble es fabricado con los mejores materiales y acabados premium</p>
+      </div>
+      <div class="feature-card fade-in">
+        <i class="fas fa-palette"></i>
+        <h4>Personalización</h4>
+        <p>Elegí los colores, medidas y detalles que se adapten a tu estilo</p>
+      </div>
+      <div class="feature-card fade-in">
+        <i class="fas fa-shield-alt"></i>
+        <h4>Garantía de Calidad</h4>
+        <p>Todos nuestros productos cuentan con garantía y soporte post-venta</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about-section" id="nosotros">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Sobre Nosotros</div>
+      <h2>Home Comfort</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-img fade-in">
+        <img src="img/photo_2026-03-23_19.25.17.jpeg" alt="Showroom Home Comfort">
+      </div>
+      <div class="about-text fade-in">
+        <h3>Diseñamos <span>tu espacio ideal</span></h3>
+        <p>En Home Comfort nos dedicamos a crear muebles de diseño que transforman cualquier ambiente. Nuestros tocadores Hollywood, paneles TV y espejos LED combinan funcionalidad con estética premium.</p>
+        <p>Trabajamos con materiales de primera calidad y cada pieza es fabricada con atención al detalle para garantizar un acabado impecable.</p>
+        <div class="about-stats">
+          <div class="stat"><div class="num">+5.000</div><div class="lbl">Clientes</div></div>
+          <div class="stat"><div class="num">+8.000</div><div class="lbl">Muebles Entregados</div></div>
+          <div class="stat"><div class="num">100%</div><div class="lbl">Fabricación Propia</div></div>
+          <div class="stat"><div class="num">5 ★</div><div class="lbl">Calificación</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO BUY -->
+<section class="section" id="como-comprar">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Proceso Simple</div>
+      <h2>Cómo Comprar</h2>
+      <p>En 4 pasos simples tenés tu mueble soñado en casa</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card fade-in" style="position:relative">
+        <div class="step-number">1</div>
+        <i class="fas fa-hand-pointer step-icon"></i>
+        <h4>Elegí tu Mueble</h4>
+        <p>Explorá nuestro catálogo y elegí el modelo, tamaño y color que más te guste. Podés personalizarlo a tu medida.</p>
+        <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+      </div>
+      <div class="step-card fade-in" style="position:relative">
+        <div class="step-number">2</div>
+        <i class="fab fa-whatsapp step-icon"></i>
+        <h4>Coordinamos Detalles</h4>
+        <p>Te contactamos por WhatsApp para confirmar medidas, colores, personalización y coordinar el pago.</p>
+        <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+      </div>
+      <div class="step-card fade-in" style="position:relative">
+        <div class="step-number">3</div>
+        <i class="fas fa-tools step-icon"></i>
+        <h4>Fabricamos tu Mueble</h4>
+        <p>Nuestro equipo fabrica tu mueble con materiales premium y atención al detalle. Tiempo estimado: 10-15 días hábiles.</p>
+        <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-number">4</div>
+        <i class="fas fa-truck step-icon"></i>
+        <h4>Recibí en tu Casa</h4>
+        <p>Enviamos a todo el país con embalaje reforzado y seguimiento en tiempo real. ¡Disfrutá tu nuevo espacio!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonios">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Lo que dicen nuestros clientes</div>
+      <h2>Testimonios</h2>
+      <p>Más de 5.000 clientes satisfechos nos respaldan</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">SL</div>
+          <div><div class="testimonial-name">Sofía L.</div><div class="testimonial-city">Buenos Aires, CABA</div></div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-verified"><i class="fas fa-circle-check"></i> Compra verificada</div>
+        <div class="testimonial-text">"Me compré el Tocador Hollywood XL y es una obra de arte. La calidad del espejo, los cajones, todo impecable. Lo recibí en 12 días y llegó perfecto. Súper recomendable."</div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">MR</div>
+          <div><div class="testimonial-name">Martín R.</div><div class="testimonial-city">Rosario, Santa Fe</div></div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-verified"><i class="fas fa-circle-check"></i> Compra verificada</div>
+        <div class="testimonial-text">"Compramos un Panel TV LED Mármol para el living y quedó espectacular. Mi señora está encantada. La atención por WhatsApp fue rápida y nos ayudaron con las medidas."</div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">CG</div>
+          <div><div class="testimonial-name">Camila G.</div><div class="testimonial-city">Córdoba Capital</div></div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-verified"><i class="fas fa-circle-check"></i> Compra verificada</div>
+        <div class="testimonial-text">"Tercer mueble que les compro. Primero un espejo Hollywood, después un tocador, y ahora el centro de belleza completo. La calidad siempre es excelente y el trato muy profesional."</div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">VA</div>
+          <div><div class="testimonial-name">Valentina A.</div><div class="testimonial-city">Mendoza</div></div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-verified"><i class="fas fa-circle-check"></i> Compra verificada</div>
+        <div class="testimonial-text">"El tocador rosa que pedí llegó hermoso y tal cual las fotos. Lo mejor es que pude personalizarlo con las medidas exactas de mi habitación. Son muy atentos con cada detalle."</div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">LP</div>
+          <div><div class="testimonial-name">Luciana P.</div><div class="testimonial-city">La Plata, Buenos Aires</div></div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-verified"><i class="fas fa-circle-check"></i> Compra verificada</div>
+        <div class="testimonial-text">"Tenía miedo de comprar muebles online, pero Home Comfort me dio mucha confianza. Me mandaron fotos del proceso de fabricación y el resultado final superó mis expectativas."</div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">NF</div>
+          <div><div class="testimonial-name">Nicolás F.</div><div class="testimonial-city">Mar del Plata</div></div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-verified"><i class="fas fa-circle-check"></i> Compra verificada</div>
+        <div class="testimonial-text">"Le regalé un tocador espejado a mi novia y fue el mejor regalo que le hice. La calidad es premium, los tiradores de cristal le dan un toque increíble. 100% recomendado."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Resolvé tus dudas</div>
+      <h2>Preguntas Frecuentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>¿Cuánto tiempo tarda la fabricación de un mueble?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">El tiempo de fabricación varía según el producto. Los tocadores estándar tardan entre 10 y 15 días hábiles. Los centros de belleza y productos más grandes pueden llevar entre 15 y 20 días hábiles. Siempre te mantenemos informado del avance por WhatsApp.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>¿Hacen envíos a todo el país?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Sí, realizamos envíos a todo el país a través de transporte seguro con embalaje reforzado. CABA y GBA tienen entrega en 1-3 días hábiles después del despacho. Interior del país entre 3-7 días hábiles. Todos los envíos incluyen código de seguimiento en tiempo real.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>¿Puedo personalizar el color y las medidas?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">¡Por supuesto! Todos nuestros muebles son de fabricación propia, lo que nos permite adaptarnos a tus necesidades. Podés elegir colores, medidas especiales, tipo de tiradores, con o sin luces LED, y cualquier otro detalle. Escribinos por WhatsApp y armamos tu mueble ideal.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>¿Qué garantía tienen los productos?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Todos nuestros productos cuentan con 6 meses de garantía que cubre defectos de fabricación y materiales. Además, brindamos soporte post-venta para cualquier consulta o necesidad que surja después de recibir tu mueble.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>¿Qué métodos de pago aceptan?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Aceptamos transferencia bancaria, efectivo, tarjetas de crédito/débito, Mercado Pago y USDT (criptomonedas por red TRC-20 o BEP20). También ofrecemos la posibilidad de pagar en cuotas según el método elegido. Coordinamos los detalles de pago por WhatsApp al momento de confirmar tu pedido.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>¿Puedo retirar mi mueble en persona?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Sí, ofrecemos la opción de retiro en persona en nuestro depósito de <strong>San Martín 3578, Saladillo, Provincia de Buenos Aires</strong>. Coordiná previamente por WhatsApp el día y horario de retiro. El retiro en persona no tiene costo adicional.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>¿Los precios publicados incluyen el envío?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Los precios publicados corresponden al producto. El costo de envío varía según tu ubicación y se calcula al momento de coordinar el pedido. Te informamos el costo exacto por WhatsApp antes de confirmar la compra, sin sorpresas.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section class="section payment-section" id="contacto">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Formas de Pago</div>
+      <h2>Métodos de Pago</h2>
+    </div>
+    <div class="payment-grid">
+      <div class="pay-card"><i class="fas fa-university"></i><span>Transferencia</span></div>
+      <div class="pay-card"><i class="fas fa-money-bill-wave"></i><span>Efectivo</span></div>
+      <div class="pay-card"><i class="fas fa-credit-card"></i><span>Tarjeta</span></div>
+      <div class="pay-card"><i class="fas fa-wallet"></i><span>Mercado Pago</span></div>
+      <div class="pay-card"><i class="fas fa-coins"></i><span>USDT</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="img/logohome.jpeg" class="footer-logo" alt="Home Comfort">
+  <p style="font-family:var(--font-display);color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:.3rem">HOME COMFORT</p>
+  <p><i class="fas fa-location-dot" style="color:var(--gold);margin-right:.3rem"></i>San Martín 3578 — Saladillo, Provincia de Buenos Aires</p>
+  <p style="font-size:.75rem;color:var(--text-muted);margin-top:.2rem">Lugar de depósito y retiro</p>
+  <p style="margin-top:.6rem">Diseños de Interiores — Todos los derechos reservados © 2026</p>
+  <div class="footer-links">
+    <a href="https://wa.me/5491124882908" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Volver arriba" aria-label="Volver arriba">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/5491124882908" target="_blank" class="float-wa" title="Escribinos por WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart(false)"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3><i class="fas fa-shopping-bag"></i> Mi Carrito</h3>
+    <button class="cart-close" onclick="toggleCart(false)"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty"><i class="fas fa-shopping-bag"></i><p>Tu carrito está vacío</p></div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total"><span>Total</span><span id="cartTotal">$0</span></div>
+    <button class="btn-checkout" onclick="openCheckout()"><i class="fas fa-lock"></i> Finalizar Compra</button>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal">
+
+    <!-- PASO 1: FORMULARIO -->
+    <div id="checkoutStep1">
+      <h3><i class="fas fa-gem" style="margin-right:.5rem"></i> Finalizar Pedido</h3>
+      <!-- Progress -->
+      <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1.8rem;justify-content:center">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--gold);color:#0a0a0a;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:800">1</div>
+        <div style="width:50px;height:2px;background:rgba(201,168,76,.2);border-radius:2px"></div>
+        <div style="width:32px;height:32px;border-radius:50%;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.25);color:var(--text-muted);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700">2</div>
+      </div>
+      <div class="order-summary" id="orderSummary"></div>
+      <div class="form-row">
+        <div class="form-group"><label>Nombre</label><input type="text" id="cName" placeholder="Tu nombre"></div>
+        <div class="form-group"><label>Apellido</label><input type="text" id="cLast" placeholder="Tu apellido"></div>
+      </div>
+      <div class="form-group"><label>Teléfono</label><input type="tel" id="cPhone" placeholder="Ej: 11 2345-6789"></div>
+      <div class="form-group"><label>Email</label><input type="email" id="cEmail" placeholder="tucorreo@email.com"></div>
+      <div class="form-row">
+        <div class="form-group"><label>Ciudad</label><input type="text" id="cCity" placeholder="Tu ciudad"></div>
+        <div class="form-group"><label>Provincia</label><input type="text" id="cProv" placeholder="Tu provincia"></div>
+      </div>
+      <div class="form-group"><label>Dirección de envío</label><input type="text" id="cAddr" placeholder="Calle, número, piso"></div>
+      <div class="form-group"><label>Notas adicionales (opcional)</label><textarea id="cNotes" rows="2" placeholder="Color especial, medida, etc."></textarea></div>
+      <button class="btn-checkout" style="margin-top:.5rem" onclick="goToPayment()"><i class="fas fa-arrow-right"></i> Ir al Pago</button>
+    </div>
+
+    <!-- PASO 2: MÉTODO DE PAGO -->
+    <div id="checkoutStep2" style="display:none">
+      <h3><i class="fas fa-credit-card" style="margin-right:.5rem"></i> Método de Pago</h3>
+      <!-- Progress -->
+      <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1.8rem;justify-content:center">
+        <div style="width:32px;height:32px;border-radius:50%;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.25);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700"><i class="fas fa-check" style="font-size:.7rem"></i></div>
+        <div style="width:50px;height:2px;background:var(--gold);border-radius:2px"></div>
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--gold);color:#0a0a0a;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:800">2</div>
+      </div>
+
+      <div class="order-summary" id="orderSummary2"></div>
+
+      <!-- SELLOS DE CONFIANZA -->
+      <div class="trust-row">
+        <div class="trust-item"><i class="fas fa-lock"></i><span>Compra<br>Segura</span></div>
+        <div class="trust-item"><i class="fas fa-shield-halved"></i><span>Datos<br>Protegidos</span></div>
+        <div class="trust-item"><i class="fas fa-award"></i><span>6 Meses<br>Garantía</span></div>
+        <div class="trust-item"><i class="fab fa-whatsapp"></i><span>Soporte<br>Post-venta</span></div>
+      </div>
+
+      <p style="text-align:center;color:var(--text-dim);font-size:.9rem;margin-bottom:1.5rem">Elegí cómo querés pagar tu pedido:</p>
+
+      <!-- BOTÓN TRANSFERENCIA -->
+      <button class="pay-method-btn" id="btnTransfer" onclick="selectPayMethod('transferencia')">
+        <div class="pay-method-icon"><i class="fas fa-university"></i></div>
+        <div class="pay-method-info">
+          <div class="pay-method-title">Transferencia Bancaria</div>
+          <div class="pay-method-desc">Transferí el monto a nuestra cuenta y envianos el comprobante</div>
+        </div>
+        <div class="pay-method-check"><i class="fas fa-circle"></i></div>
+      </button>
+
+      <!-- BOTÓN EFECTIVO -->
+      <button class="pay-method-btn" id="btnCash" onclick="selectPayMethod('efectivo')">
+        <div class="pay-method-icon"><i class="fas fa-money-bill-wave"></i></div>
+        <div class="pay-method-info">
+          <div class="pay-method-title">Efectivo</div>
+          <div class="pay-method-desc">Pagá en efectivo al momento de recibir o retirar tu pedido</div>
+        </div>
+        <div class="pay-method-check"><i class="fas fa-circle"></i></div>
+      </button>
+
+      <!-- BOTÓN TARJETA DE CRÉDITO/DÉBITO -->
+      <button class="pay-method-btn" id="btnCard" onclick="selectPayMethod('tarjeta')">
+        <div class="pay-method-icon"><i class="fas fa-credit-card"></i></div>
+        <div class="pay-method-info">
+          <div class="pay-method-title">Tarjeta de Crédito / Débito</div>
+          <div class="pay-method-desc">Visa, Mastercard, American Express y más</div>
+        </div>
+        <div class="pay-method-check"><i class="fas fa-circle"></i></div>
+      </button>
+
+      <!-- BOTÓN USDT -->
+      <button class="pay-method-btn" id="btnUsdt" onclick="selectPayMethod('usdt')">
+        <div class="pay-method-icon" style="font-size:1rem;font-weight:800;letter-spacing:-0.5px">₮</div>
+        <div class="pay-method-info">
+          <div class="pay-method-title">USDT (Tether)</div>
+          <div class="pay-method-desc">Pagá con criptomonedas — Red TRC-20 o BEP20</div>
+        </div>
+        <div class="pay-method-check"><i class="fas fa-circle"></i></div>
+      </button>
+
+      <!-- DATOS USDT (visible solo si elige USDT) -->
+      <div id="usdtData" style="display:none;margin-top:1rem">
+        <div style="background:var(--bg3);border:1px solid rgba(201,168,76,.15);border-radius:var(--radius-sm);padding:1.4rem">
+          <h4 style="font-size:.9rem;font-weight:700;color:var(--gold-light);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-coins"></i> Pago con USDT</h4>
+          <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:1.2rem;line-height:1.7">Seleccioná la red por la que querés enviar tu pago:</p>
+
+          <!-- Selector de red -->
+          <div style="display:flex;gap:.8rem;margin-bottom:1.2rem">
+            <button id="btnTrc20" onclick="selectUsdtNetwork('trc20')" style="flex:1;padding:.9rem 1rem;border-radius:var(--radius-sm);background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);color:var(--text-dim);font-size:.9rem;font-weight:700;cursor:pointer;transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:.5rem">
+              <i class="fas fa-network-wired" style="font-size:.8rem"></i> TRC-20
+            </button>
+            <button id="btnBep20" onclick="selectUsdtNetwork('bep20')" style="flex:1;padding:.9rem 1rem;border-radius:var(--radius-sm);background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);color:var(--text-dim);font-size:.9rem;font-weight:700;cursor:pointer;transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:.5rem">
+              <i class="fas fa-network-wired" style="font-size:.8rem"></i> BEP20
+            </button>
+          </div>
+
+          <!-- Datos TRC-20 -->
+          <div id="trc20Data" style="display:none">
+            <div style="background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);border-radius:var(--radius-sm);padding:1.2rem">
+              <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem">
+                <span style="background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);border-radius:50px;padding:3px 12px;font-size:.7rem;font-weight:700;color:var(--gold-light);letter-spacing:1px">RED TRC-20</span>
+                <span style="font-size:.75rem;color:var(--text-muted)">(Red Tron)</span>
+              </div>
+              <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:.5rem;font-weight:600">Dirección de Wallet:</p>
+              <div style="background:var(--bg2);border:1px solid rgba(201,168,76,.15);border-radius:8px;padding:.8rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem">
+                <code id="walletTrc20" style="font-size:.78rem;color:var(--gold-light);word-break:break-all;font-family:'Courier New',monospace;letter-spacing:.5px">TJexKy4dYEMa6JnSkhTEMaNbxMRHeKPQr4</code>
+                <button onclick="copyWallet('walletTrc20')" style="background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.25);border-radius:6px;padding:.4rem .7rem;color:var(--gold-light);font-size:.75rem;cursor:pointer;transition:var(--transition);white-space:nowrap;display:flex;align-items:center;gap:.3rem"><i class="fas fa-copy"></i> Copiar</button>
+              </div>
+              <div style="margin-top:1rem;padding-top:.8rem;border-top:1px solid rgba(201,168,76,.1)">
+                <p style="font-size:.78rem;color:var(--text-muted);line-height:1.6;margin:0"><i class="fas fa-exclamation-triangle" style="color:#f5a623;margin-right:.3rem"></i> <strong style="color:var(--text)">Importante:</strong> Enviá únicamente USDT por la red TRC-20. Usar otra red puede resultar en la pérdida de los fondos.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Datos BEP20 -->
+          <div id="bep20Data" style="display:none">
+            <div style="background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);border-radius:var(--radius-sm);padding:1.2rem">
+              <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem">
+                <span style="background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);border-radius:50px;padding:3px 12px;font-size:.7rem;font-weight:700;color:var(--gold-light);letter-spacing:1px">RED BEP20</span>
+                <span style="font-size:.75rem;color:var(--text-muted)">(Binance Smart Chain)</span>
+              </div>
+              <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:.5rem;font-weight:600">Dirección de Wallet:</p>
+              <div style="background:var(--bg2);border:1px solid rgba(201,168,76,.15);border-radius:8px;padding:.8rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem">
+                <code id="walletBep20" style="font-size:.78rem;color:var(--gold-light);word-break:break-all;font-family:'Courier New',monospace;letter-spacing:.5px">0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db</code>
+                <button onclick="copyWallet('walletBep20')" style="background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.25);border-radius:6px;padding:.4rem .7rem;color:var(--gold-light);font-size:.75rem;cursor:pointer;transition:var(--transition);white-space:nowrap;display:flex;align-items:center;gap:.3rem"><i class="fas fa-copy"></i> Copiar</button>
+              </div>
+              <div style="margin-top:1rem;padding-top:.8rem;border-top:1px solid rgba(201,168,76,.1)">
+                <p style="font-size:.78rem;color:var(--text-muted);line-height:1.6;margin:0"><i class="fas fa-exclamation-triangle" style="color:#f5a623;margin-right:.3rem"></i> <strong style="color:var(--text)">Importante:</strong> Enviá únicamente USDT por la red BEP20. Usar otra red puede resultar en la pérdida de los fondos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:1rem;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.1);border-radius:8px;padding:.9rem;display:flex;gap:.6rem;align-items:flex-start">
+            <i class="fas fa-info-circle" style="color:var(--gold);font-size:.95rem;margin-top:2px;flex-shrink:0"></i>
+            <p style="font-size:.78rem;color:var(--text-dim);line-height:1.6;margin:0">Una vez realizado el envío, mandá el <strong style="color:#fff">hash de la transacción</strong> o captura por WhatsApp para confirmar tu pedido.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULARIO TARJETA (visible solo si elige tarjeta) -->
+      <div id="cardData" style="display:none;margin-top:1rem">
+        <div style="background:var(--bg3);border:1px solid rgba(201,168,76,.15);border-radius:var(--radius-sm);padding:1.4rem">
+          <h4 style="font-size:.9rem;font-weight:700;color:var(--gold-light);margin-bottom:1.2rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-lock"></i> Datos de tu Tarjeta</h4>
+
+          <!-- Tarjeta visual animada -->
+          <div class="card-visual" id="cardPreview">
+            <div class="card-top">
+              <div class="card-chip"></div>
+              <div class="card-network" id="cardNetworkIcon"><i class="fas fa-credit-card"></i></div>
+            </div>
+            <div class="card-number-display" id="cardNumDisplay">•••• •••• •••• ••••</div>
+            <div class="card-bottom">
+              <div>
+                <div class="card-label-sm">Titular</div>
+                <div class="card-holder-display" id="cardHolderDisplay">NOMBRE APELLIDO</div>
+              </div>
+              <div style="text-align:right">
+                <div class="card-label-sm">Vence</div>
+                <div class="card-exp-display" id="cardExpDisplay">MM/AA</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Número de tarjeta -->
+          <div class="form-group" style="margin-bottom:.8rem">
+            <label>Número de Tarjeta</label>
+            <div class="card-input-wrap">
+              <input type="tel" id="ccNumber" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCardNumber(this)" style="width:100%;padding:.75rem 2.8rem .75rem 1rem;background:var(--bg2);border:1px solid rgba(201,168,76,.12);border-radius:var(--radius-sm);color:var(--text);font-size:.9rem;font-family:'Courier New',monospace;letter-spacing:2px;transition:var(--transition)">
+              <i class="fas fa-credit-card"></i>
+            </div>
+          </div>
+
+          <!-- Nombre y Apellido -->
+          <div class="form-group" style="margin-bottom:.8rem">
+            <label>Nombre y Apellido (como figura en la tarjeta)</label>
+            <input type="text" id="ccName" placeholder="Ej: MARIA GARCIA" oninput="updateCardPreview()" style="width:100%;padding:.75rem 1rem;background:var(--bg2);border:1px solid rgba(201,168,76,.12);border-radius:var(--radius-sm);color:var(--text);font-size:.9rem;text-transform:uppercase;transition:var(--transition)">
+          </div>
+
+          <!-- Vencimiento y CVV -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:.8rem">
+            <div class="form-group" style="margin-bottom:0">
+              <label>Vencimiento</label>
+              <input type="tel" id="ccExp" placeholder="MM/AA" maxlength="5" oninput="formatCardExp(this)" style="width:100%;padding:.75rem 1rem;background:var(--bg2);border:1px solid rgba(201,168,76,.12);border-radius:var(--radius-sm);color:var(--text);font-size:.9rem;font-family:'Courier New',monospace;letter-spacing:2px;transition:var(--transition)">
+            </div>
+            <div class="form-group" style="margin-bottom:0">
+              <label>Código de Seguridad (CVV)</label>
+              <div class="card-input-wrap">
+                <input type="tel" id="ccCvv" placeholder="•••" maxlength="4" oninput="updateCardPreview()" style="width:100%;padding:.75rem 2.8rem .75rem 1rem;background:var(--bg2);border:1px solid rgba(201,168,76,.12);border-radius:var(--radius-sm);color:var(--text);font-size:.9rem;font-family:'Courier New',monospace;letter-spacing:3px;transition:var(--transition)">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cuotas -->
+          <div class="form-group" style="margin-bottom:.8rem">
+            <label>Cantidad de Cuotas</label>
+            <select id="ccCuotas" style="width:100%;padding:.75rem 1rem;background:var(--bg2);border:1px solid rgba(201,168,76,.12);border-radius:var(--radius-sm);color:var(--text);font-size:.9rem;transition:var(--transition)">
+              <option value="1">1 cuota (sin interés)</option>
+              <option value="3">3 cuotas</option>
+              <option value="6">6 cuotas</option>
+              <option value="12">12 cuotas</option>
+              <option value="18">18 cuotas</option>
+              <option value="24">24 cuotas</option>
+            </select>
+          </div>
+
+          <div style="background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:8px;padding:.9rem;display:flex;gap:.6rem;align-items:flex-start;margin-top:.5rem">
+            <i class="fas fa-lock" style="color:var(--gold);font-size:.95rem;margin-top:2px;flex-shrink:0"></i>
+            <p style="font-size:.78rem;color:var(--text-dim);line-height:1.6;margin:0">Tus datos están protegidos con encriptación SSL. Los detalles de tu tarjeta se coordinarán de forma segura por WhatsApp para confirmar el pago.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALERTA TRANSFERENCIA (visible solo si elige transferencia) -->
+      <div id="transferAlert" style="display:none;margin-top:1.2rem">
+        <div style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:var(--radius-sm);padding:1.2rem;display:flex;gap:.8rem;align-items:flex-start">
+          <i class="fas fa-exclamation-triangle" style="color:var(--gold);font-size:1.1rem;margin-top:2px;flex-shrink:0"></i>
+          <p style="font-size:.85rem;color:var(--text-dim);line-height:1.7;margin:0">Le recomendamos que la transferencia sea desde una <strong style="color:#fff">cuenta bancaria directamente</strong>, ya que Mercado Pago a veces rechaza o pone límites por el monto de la operación. De esta forma evitamos demoras y se acredita al instante sin problemas &#10004;</p>
+        </div>
+      </div>
+
+      <!-- DATOS BANCARIOS (visible solo si elige transferencia) -->
+      <div id="transferData" style="display:none;margin-top:1rem">
+        <div style="background:var(--bg3);border:1px solid rgba(201,168,76,.15);border-radius:var(--radius-sm);padding:1.2rem">
+          <h4 style="font-size:.9rem;font-weight:700;color:var(--gold-light);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-building-columns"></i> Datos para Transferencia</h4>
+          <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:.4rem"><strong style="color:var(--text)">CBU:</strong> 0000077200132507239983</p>
+          <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:.4rem"><strong style="color:var(--text)">Alias:</strong> Lucia.reynaga10</p>
+          <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:0"><strong style="color:var(--text)">A nombre de:</strong> Gisela Lucia Reynaga</p>
+          <div style="margin-top:1rem;padding-top:.8rem;border-top:1px solid rgba(201,168,76,.1)">
+            <p style="font-size:.8rem;color:var(--text-muted);line-height:1.6;margin:0"><i class="fas fa-info-circle" style="color:var(--gold);margin-right:.3rem"></i> Una vez realizada la transferencia, enviá el comprobante por WhatsApp para confirmar tu pedido.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFO EFECTIVO (visible solo si elige efectivo) -->
+      <div id="cashData" style="display:none;margin-top:1.2rem">
+        <div style="background:var(--bg3);border:1px solid rgba(201,168,76,.15);border-radius:var(--radius-sm);padding:1.2rem">
+          <h4 style="font-size:.9rem;font-weight:700;color:var(--gold-light);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-hand-holding-dollar"></i> Pago en Efectivo</h4>
+          <p style="font-size:.85rem;color:var(--text-dim);line-height:1.7;margin-bottom:.5rem">Para coordinar el pago en efectivo, contactanos por WhatsApp para definir los detalles de entrega o retiro.</p>
+          <p style="font-size:.8rem;color:var(--text-dim);line-height:1.6;margin-bottom:1rem"><i class="fas fa-location-dot" style="color:var(--gold);margin-right:.3rem"></i><strong style="color:var(--text)">Depósito:</strong> San Martín 3578, Saladillo, Provincia de Buenos Aires</p>
+          <a href="https://wa.me/5491124882908" target="_blank" style="display:inline-flex;align-items:center;gap:.5rem;background:#25D366;color:#fff;padding:.6rem 1.4rem;border-radius:8px;font-size:.85rem;font-weight:700;text-decoration:none;transition:var(--transition)"><i class="fab fa-whatsapp"></i> Escribinos</a>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:.8rem;margin-top:1.5rem">
+        <button onclick="backToStep1()" style="flex:1;padding:.85rem;border-radius:var(--radius-sm);background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);color:var(--text-dim);font-size:.9rem;font-weight:600;cursor:pointer;transition:var(--transition)"><i class="fas fa-arrow-left"></i> Volver</button>
+        <button class="btn-checkout" id="btnConfirmPay" onclick="confirmOrder()" style="flex:2;opacity:.5;pointer-events:none"><i class="fas fa-check"></i> Confirmar Pedido</button>
+      </div>
+    </div>
+
+    <!-- PASO 3: GRACIAS -->
+    <div id="checkoutThanks" style="display:none">
+      <div class="thankyou">
+        <i class="fas fa-check-circle"></i>
+        <h3>¡Pedido Enviado!</h3>
+        <p id="thanksText">Te contactaremos por WhatsApp para confirmar los detalles y coordinar el envío. ¡Gracias por elegir Home Comfort!</p>
+        <a id="btnComprobante" href="#" target="_blank" class="btn-whatsapp" style="display:none;text-decoration:none"><i class="fab fa-whatsapp"></i> Enviar Comprobante por WhatsApp</a>
+        <button class="btn-gold" style="margin-top:1.5rem" onclick="closeCheckout()">Volver a la Tienda</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============ PRODUCTS DATA ============
+const PRODUCTS = [
+  {
+    name: "Set Maquillador Hollywood White Denver",
+    category: "Centros de Belleza",
+    image: "img/set-maquillador-hollywood-white-denver.jpeg",
+    desc: "Set Hollywood modelo Denver en blanco: espejo con bombillas, tapa de vidrio, cajones con tiradores cristal y estantería lateral con detalles grises",
+    badge: "NUEVO",
+    colors: [{name:"Blanco",hex:"#f0f0f0"}],
+    variants: [{size:"Denver (Completo)",price:255000}]
+  },
+  {
+    name: "Set Maquillador Hollywood White XXL",
+    category: "Centros de Belleza",
+    image: "img/set-maquillador-hollywood-white-xxl.jpeg",
+    desc: "Set completo de maquillador Hollywood XXL en blanco: gran espejo con bombillas, tapa de vidrio, múltiples cajones y estanterías laterales",
+    badge: "NUEVO",
+    colors: [{name:"Blanco",hex:"#f0f0f0"}],
+    variants: [{size:"XXL (Completo)",price:267750}]
+  },
+  {
+    name: "Tocador Hollywood XL con Estantes",
+    category: "Tocadores",
+    image: "img/photo_2026-03-23 19.24.14.jpeg",
+    desc: "Tocador con espejo Hollywood iluminado, tapa de vidrio, cajones y estantes laterales",
+    badge: "POPULAR",
+    colors: [{name:"Blanco",hex:"#f0f0f0"},{name:"Negro",hex:"#2c2c2e"},{name:"Rosa",hex:"#f4b8c8"}],
+    variants: [{size:"Estándar (120cm)",price:260000,oldPrice:380000},{size:"XL (150cm)",price:450000}]
+  },
+  {
+    name: "Tocador Hollywood Premium",
+    category: "Tocadores",
+    image: "img/photo_2026-03-23_19.24.23.jpeg",
+    desc: "Tocador Hollywood con espejo de bombillas, múltiples cajones y tapa de vidrio",
+    badge: "NUEVO",
+    colors: [{name:"Blanco",hex:"#f0f0f0"},{name:"Rosa",hex:"#f4b8c8"},{name:"Negro",hex:"#2c2c2e"}],
+    variants: [{size:"Estándar (120cm)",price:253500,oldPrice:350000},{size:"XL (150cm)",price:420000}]
+  },
+  {
+    name: "Centro de Belleza con Vitrinas",
+    category: "Centros de Belleza",
+    image: "img/photo_2026-03-23_19.24.35.jpeg",
+    desc: "Centro de belleza completo con vitrinas de vidrio iluminadas, cajones espejados y espejo Hollywood",
+    badge: "PREMIUM",
+    colors: [{name:"Blanco / Espejado",hex:"#e8e8e8"},{name:"Negro / Espejado",hex:"#3a3a3c"}],
+    variants: [{size:"Completo (200cm)",price:399000,oldPrice:850000},{size:"XL (240cm)",price:700000,oldPrice:1050000}]
+  },
+  {
+    name: "Tocador Moderno LED con Panel",
+    category: "Tocadores",
+    image: "img/photo_2026-03-23_19.24.40.jpeg",
+    desc: "Tocador de diseño moderno con espejo LED perimetral y panel decorativo ranurado",
+    badge: null,
+    colors: [{name:"Blanco / Madera",hex:"#f0e4d3"},{name:"Gris / Madera",hex:"#c8c8c8"},{name:"Negro / Madera",hex:"#3a3a3c"}],
+    variants: [{size:"Estándar (100cm)",price:320000},{size:"Con closet",price:480000}]
+  },
+  {
+    name: "Tocador Espejado Hollywood",
+    category: "Tocadores",
+    image: "img/photo_2026-03-23_19.24.44.jpeg",
+    desc: "Tocador completamente espejado con bombillas Hollywood y silla capitoné",
+    badge: "HOT",
+    colors: [{name:"Espejado / Blanco",hex:"#e0e0e0"},{name:"Espejado / Negro",hex:"#4a4a4a"}],
+    variants: [{size:"Estándar (120cm)",price:276000,oldPrice:420000},{size:"XL (140cm)",price:490000}]
+  },
+  {
+    name: "Espejo Hollywood Cuerpo Entero",
+    category: "Espejos",
+    image: "img/photo_2026-03-23_19.24.47.jpeg",
+    desc: "Espejo de cuerpo entero con bombillas Hollywood perimetrales, ideal para dormitorios",
+    badge: "POPULAR",
+    colors: [{name:"Marco Blanco",hex:"#f0f0f0"},{name:"Marco Negro",hex:"#2c2c2e"},{name:"Sin Marco",hex:"#e0e0e0"}],
+    variants: [{size:"150x60cm",price:180000},{size:"180x70cm",price:240000}]
+  },
+  {
+    name: "Tocador con Espejo LED y Estantería",
+    category: "Tocadores",
+    image: "img/photo_2026-03-23_19.24.51.jpeg",
+    desc: "Tocador con espejo LED rectangular, cajonera lateral con tiradores cristal y estantería",
+    badge: null,
+    colors: [{name:"Blanco",hex:"#f0f0f0"},{name:"Gris",hex:"#c8c8c8"},{name:"Negro",hex:"#2c2c2e"}],
+    variants: [{size:"Estándar (110cm)",price:290000},{size:"Con estantería",price:360000}]
+  },
+  {
+    name: "Espejo Flotante Hollywood",
+    category: "Espejos",
+    image: "img/photo_2026-03-23_19.24.55.jpeg",
+    desc: "Espejo Hollywood flotante de pared con cajones integrados y bombillas LED",
+    badge: "NUEVO",
+    colors: [{name:"Blanco",hex:"#f0f0f0"},{name:"Negro",hex:"#2c2c2e"}],
+    variants: [{size:"80x80cm",price:160000},{size:"100x80cm",price:195000}]
+  },
+  {
+    name: "Tocador LED con Cajonera Cristal",
+    category: "Tocadores",
+    image: "img/photo_2026-03-23_19.24.58.jpeg",
+    desc: "Tocador con espejo LED perimetral, cajonera con tiradores de cristal y estantería lateral",
+    badge: null,
+    colors: [{name:"Blanco",hex:"#f0f0f0"},{name:"Beige",hex:"#e8dcc8"},{name:"Gris",hex:"#c8c8c8"}],
+    variants: [{size:"Estándar (100cm)",price:286500,oldPrice:310000},{size:"Con estantería",price:380000}]
+  },
+  {
+    name: "Espejo XL Cuerpo Entero con Bombillas",
+    category: "Espejos",
+    image: "img/photo_2026-03-23_19.25.02.jpeg",
+    desc: "Gran espejo de cuerpo entero con bombillas Hollywood en todo el perímetro",
+    badge: "HOT",
+    colors: [{name:"Marco Blanco",hex:"#f0f0f0"},{name:"Marco Negro",hex:"#2c2c2e"},{name:"Espejado",hex:"#d8d8d8"}],
+    variants: [{size:"180x80cm",price:300000},{size:"200x90cm",price:350000}]
+  },
+  {
+    name: "Centro de Belleza Premium",
+    category: "Centros de Belleza",
+    image: "img/photo_2026-03-23_19.25.05.jpeg",
+    desc: "Centro de belleza con vitrinas iluminadas, múltiples cajones y banco capitoné",
+    badge: "PREMIUM",
+    colors: [{name:"Blanco",hex:"#f0f0f0"},{name:"Gris Claro",hex:"#d0d0d0"}],
+    variants: [{size:"Completo (180cm)",price:340000,oldPrice:780000},{size:"XL (220cm)",price:650000,oldPrice:950000}]
+  },
+  {
+    name: "Centro de Belleza Espejado",
+    category: "Centros de Belleza",
+    image: "img/photo_2026-03-23_19.25.10.jpeg",
+    desc: "Centro de belleza con acabado espejado completo, vitrina lateral y espejo LED",
+    badge: null,
+    colors: [{name:"Espejado / Blanco",hex:"#e0e0e0"},{name:"Espejado / Negro",hex:"#4a4a4a"}],
+    variants: [{size:"Completo (190cm)",price:288000,oldPrice:890000},{size:"XL (230cm)",price:1100000}]
+  },
+  {
+    name: "Tocadores Línea Color",
+    category: "Tocadores",
+    image: "img/photo_2026-03-23_19.25.17.jpeg",
+    desc: "Tocadores con espejo LED, cajones con tiradores dorados y banco a juego. Disponible en varios colores",
+    badge: "NUEVO",
+    colors: [{name:"Blanco",hex:"#f0f0f0"},{name:"Negro",hex:"#2c2c2e"},{name:"Beige",hex:"#d4c4a0"},{name:"Rosa",hex:"#f4b8c8"}],
+    variants: [{size:"Estándar (90cm)",price:280000},{size:"Con banco",price:340000}]
+  },
+  {
+    name: "Tocador Hollywood Rosa XL",
+    category: "Tocadores",
+    image: "img/photo_2026-03-23_19.25.21.jpeg",
+    desc: "Tocador rosa con espejo Hollywood de bombillas, cajones múltiples y estantes laterales",
+    badge: null,
+    colors: [{name:"Rosa",hex:"#f4b8c8"},{name:"Blanco",hex:"#f0f0f0"},{name:"Lila",hex:"#d8b8e8"}],
+    variants: [{size:"XL (160cm)",price:310000,oldPrice:480000},{size:"XXL (180cm)",price:560000}]
+  },
+  {
+    name: "Tocador Hollywood Clásico",
+    category: "Tocadores",
+    image: "img/photo_2026-03-23_19.25.25.jpeg",
+    desc: "Tocador blanco clásico con espejo Hollywood grande, cajones laterales y silla incluida",
+    badge: "POPULAR",
+    colors: [{name:"Blanco",hex:"#f0f0f0"},{name:"Negro",hex:"#2c2c2e"}],
+    variants: [{size:"Estándar (130cm)",price:360000},{size:"Con silla",price:420000}]
+  },
+  {
+    name: "Tocador Negro con Banca Dorada",
+    category: "Tocadores",
+    image: "img/photo_2026-03-23_19.25.29.jpeg",
+    desc: "Elegante tocador negro con vitrinas laterales, espejo LED y banca capitoné con patas doradas",
+    badge: "PREMIUM",
+    colors: [{name:"Negro / Dorado",hex:"#2c2c2e"},{name:"Blanco / Dorado",hex:"#f0f0f0"},{name:"Gris / Dorado",hex:"#808080"}],
+    variants: [{size:"Estándar (120cm)",price:299000,oldPrice:450000},{size:"Con banca",price:520000}]
+  },
+  {
+    name: "Panel TV con Tocador Flotante",
+    category: "Paneles TV",
+    image: "img/photo_2026-03-31 04.53.36.jpeg",
+    desc: "Panel de TV con diseño integrado, tocador flotante con espejo LED y cajones",
+    badge: "NUEVO",
+    colors: [{name:"Gris / Beige",hex:"#c8c0b0"},{name:"Blanco",hex:"#f0f0f0"},{name:"Negro",hex:"#2c2c2e"}],
+    variants: [{size:"Panel 55''",price:520000},{size:"Panel 65''",price:620000}]
+  },
+  {
+    name: "Panel TV LED Mármol",
+    category: "Paneles TV",
+    image: "img/photo_2026-03-31 04.53.51.jpeg",
+    desc: "Panel TV con retroiluminación LED, acabado mármol, molduras y gabinete inferior",
+    badge: "PREMIUM",
+    colors: [{name:"Blanco Mármol",hex:"#f0f0f0"},{name:"Gris Mármol",hex:"#c8c8c8"},{name:"Negro",hex:"#2c2c2e"}],
+    variants: [{size:"Panel 55''",price:580000},{size:"Panel 65''",price:680000},{size:"Panel 75''",price:780000}]
+  },
+  {
+    name: "Tocador con Espejo LED Premium",
+    category: "Tocadores",
+    image: "img/photo_2026-03-31 04.55.19.jpeg",
+    desc: "Tocador con espejo LED touch, cajones con tiradores cristal y estantería lateral",
+    badge: null,
+    colors: [{name:"Blanco",hex:"#f0f0f0"},{name:"Beige",hex:"#e8dcc8"},{name:"Gris",hex:"#c8c8c8"}],
+    variants: [{size:"Estándar (100cm)",price:210000,oldPrice:295000},{size:"Con estantería",price:365000}]
+  },
+  {
+    name: "Espejo Vestidor Hollywood",
+    category: "Espejos",
+    image: "img/photo_2026-03-31 04.55.22.jpeg",
+    desc: "Gran espejo vestidor con bombillas Hollywood, cajoneras laterales y estantes",
+    badge: null,
+    colors: [{name:"Blanco",hex:"#f0f0f0"},{name:"Negro",hex:"#2c2c2e"},{name:"Espejado",hex:"#d8d8d8"}],
+    variants: [{size:"Con cajoneras",price:120000,oldPrice:320000},{size:"Con estantes",price:380000}]
+  },
+  {
+    name: "Silla Tapizada de Diseño",
+    category: "Sillas",
+    image: "img/photo_2026-03-31 04.55.25.jpeg",
+    desc: "Silla tapizada con estructura metálica negra, diseño ergonómico y elegante",
+    badge: null,
+    colors: [{name:"Gris Claro",hex:"#d0d0d0"},{name:"Beige",hex:"#e8dcc8"},{name:"Negro",hex:"#2c2c2e"},{name:"Rosa",hex:"#f4b8c8"}],
+    variants: [{size:"Estándar",price:210000}]
+  },
+  {
+    name: "Espejo LED Cuerpo Entero",
+    category: "Espejos",
+    image: "img/photo_2026-03-31 04.55.11.jpeg",
+    desc: "Espejo de cuerpo entero con luz LED perimetral touch, diseño minimalista y elegante",
+    badge: "NUEVO",
+    colors: [{name:"Marco Negro",hex:"#2c2c2e"},{name:"Marco Blanco",hex:"#f0f0f0"},{name:"Sin Marco",hex:"#e0e0e0"}],
+    variants: [{size:"150x50cm",price:165000},{size:"180x60cm",price:220000}]
+  },
+  {
+    name: "Centro de Belleza Luxury",
+    category: "Centros de Belleza",
+    image: "img/gila.jpeg",
+    desc: "Centro de belleza de lujo con vitrinas iluminadas, espejo Hollywood, cajones espejados y almacenamiento completo",
+    badge: "LUXURY",
+    colors: [{name:"Blanco / Espejado",hex:"#e8e8e8"},{name:"Negro / Dorado",hex:"#2c2c2e"}],
+    variants: [{size:"Completo (200cm)",price:920000},{size:"XL (250cm)",price:1200000}]
+  },
+  {
+    name: "Tocador Hollywood con Estante Lateral",
+    category: "Tocadores",
+    image: "img/mue.jpeg",
+    desc: "Tocador con espejo Hollywood de bombillas, tapa de vidrio, cajones y estante lateral decorativo",
+    badge: null,
+    colors: [{name:"Blanco",hex:"#f0f0f0"},{name:"Negro",hex:"#2c2c2e"},{name:"Rosa",hex:"#f4b8c8"}],
+    variants: [{size:"Estándar (120cm)",price:340000},{size:"Con estante",price:400000}]
+  }
+];
+
+// ============ STATE ============
+let cart = [];
+let currentFilter = "Todos";
+let selectedVariants = PRODUCTS.map(() => 0);
+let selectedColors = PRODUCTS.map(() => 0);
+
+// ============ FORMAT ============
+function formatPrice(p) {
+  if (p === null) return "Consultar";
+  return "$" + p.toLocaleString("es-AR");
+}
+
+// Devuelve el HTML del precio (con descuento si corresponde)
+function priceHTML(v) {
+  if (v.price === null) return "Consultar";
+  if (v.oldPrice && v.oldPrice > v.price) {
+    const off = Math.round((1 - v.price / v.oldPrice) * 100);
+    return '<span class="price-old">' + formatPrice(v.oldPrice) + '</span> ' + formatPrice(v.price) + ' <span class="discount-badge">-' + off + '%</span>';
+  }
+  return formatPrice(v.price);
+}
+
+// ============ RENDER FILTERS ============
+function renderFilters() {
+  const cats = ["Todos", ...new Set(PRODUCTS.map(p => p.category))];
+  document.getElementById('filters').innerHTML = cats.map(c =>
+    `<button class="filter-btn ${c === currentFilter ? 'active' : ''}" onclick="setFilter('${c}')">${c}</button>`
+  ).join('');
+}
+
+function setFilter(f) {
+  currentFilter = f;
+  renderFilters();
+  renderProducts();
+}
+
+// ============ RENDER PRODUCTS ============
+function renderProducts() {
+  const filtered = currentFilter === 'Todos' ? PRODUCTS : PRODUCTS.filter(p => p.category === currentFilter);
+  const grid = document.getElementById('productsGrid');
+  grid.innerHTML = filtered.map((p, fi) => {
+    const pi = PRODUCTS.indexOf(p);
+    const vi = selectedVariants[pi];
+    const ci = selectedColors[pi];
+    const hasOffer = p.variants.some(v => v.oldPrice && v.oldPrice > v.price);
+    const waMsg = encodeURIComponent('Hola! Quiero consultar por el producto: ' + p.name);
+    return `
+    <div class="product-card fade-in" id="product-${pi}">
+      ${p.badge ? `<div class="product-badge">${p.badge}</div>` : ''}
+      ${hasOffer ? `<div class="product-offer">OFERTA</div>` : ''}
+      <div class="product-img-wrap" onclick="openLightbox('${p.image}','${p.name.replace(/'/g,"\\'")}')">
+        <img src="${p.image}" alt="${p.name}" loading="lazy">
+        <div class="product-img-overlay"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(201,168,76,.2);border:1px solid rgba(201,168,76,.3);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s ease;pointer-events:none"><i class="fas fa-search-plus" style="color:var(--gold-light);font-size:.9rem"></i></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">${p.name}</div>
+        <div class="product-desc">${p.desc}</div>
+        ${p.variants.length > 1 ? `
+        <div class="product-label">Variante</div>
+        <div class="variant-row">
+          ${p.variants.map((v, vii) => `<button class="variant-btn ${vii === vi ? 'active' : ''}" onclick="selectVariant(${pi},${vii})">${v.size}</button>`).join('')}
+        </div>` : ''}
+        <div class="product-label">Color</div>
+        <div class="color-row">
+          ${p.colors.map((c, cii) => `<div class="color-swatch ${cii === ci ? 'active' : ''}" style="background:${c.hex}" title="${c.name}" onclick="selectColor(${pi},${cii})"></div>`).join('')}
+        </div>
+        <div class="product-price" id="price-${pi}">${priceHTML(p.variants[vi])}</div>
+        <button class="btn-cart" onclick="addToCart(${pi})"><i class="fas fa-shopping-bag"></i> Agregar al Carrito</button>
+        <a class="btn-consultar" href="https://wa.me/5491124882908?text=${waMsg}" target="_blank"><i class="fab fa-whatsapp"></i> Consultar por este modelo</a>
+      </div>
+    </div>`;
+  }).join('');
+  // trigger fade-in
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.product-card.fade-in').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 80);
+    });
+  });
+}
+
+// ============ VARIANT / COLOR SELECTION ============
+function selectVariant(pi, vi) {
+  selectedVariants[pi] = vi;
+  const p = PRODUCTS[pi];
+  const priceEl = document.getElementById('price-' + pi);
+  if (priceEl) priceEl.innerHTML = priceHTML(p.variants[vi]);
+  // update buttons
+  const card = document.getElementById('product-' + pi);
+  if (card) {
+    card.querySelectorAll('.variant-btn').forEach((btn, i) => btn.classList.toggle('active', i === vi));
+  }
+}
+
+function selectColor(pi, ci) {
+  selectedColors[pi] = ci;
+  const card = document.getElementById('product-' + pi);
+  if (card) {
+    card.querySelectorAll('.color-swatch').forEach((s, i) => s.classList.toggle('active', i === ci));
+  }
+}
+
+// ============ CART ============
+function addToCart(pi) {
+  const p = PRODUCTS[pi];
+  const v = p.variants[selectedVariants[pi]];
+  const c = p.colors[selectedColors[pi]];
+  // Check if already in cart
+  const existing = cart.find(item => item.pi === pi && item.variant === v.size && item.color === c.name);
+  if (existing) {
+    existing.qty++;
+  } else {
+    cart.push({ pi, name: p.name, image: p.image, variant: v.size, color: c.name, colorHex: c.hex, price: v.price, qty: 1 });
+  }
+  updateCartUI();
+  toggleCart(true);
+}
+
+function updateCartUI() {
+  const badge = document.getElementById('cartBadge');
+  const total = cart.reduce((a, c) => a + c.qty, 0);
+  badge.textContent = total;
+  badge.classList.toggle('show', total > 0);
+
+  const itemsEl = document.getElementById('cartItems');
+  const footerEl = document.getElementById('cartFooter');
+
+  if (cart.length === 0) {
+    itemsEl.innerHTML = '<div class="cart-empty"><i class="fas fa-shopping-bag"></i><p>Tu carrito está vacío</p></div>';
+    footerEl.style.display = 'none';
+    return;
+  }
+
+  footerEl.style.display = 'block';
+  itemsEl.innerHTML = cart.map((item, i) => `
+    <div class="cart-item">
+      <img src="${item.image}" class="cart-item-img" alt="">
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-variant">${item.variant} · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${item.colorHex};vertical-align:middle"></span> ${item.color}</div>
+        <div class="cart-item-price">${formatPrice(item.price * item.qty)}</div>
+        <div class="cart-item-actions">
+          <button onclick="changeQty(${i},-1)">−</button>
+          <span>${item.qty}</span>
+          <button onclick="changeQty(${i},1)">+</button>
+          <button class="cart-item-remove" onclick="removeItem(${i})"><i class="fas fa-trash-alt"></i></button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  document.getElementById('cartTotal').textContent = formatPrice(cart.reduce((a, c) => a + c.price * c.qty, 0));
+}
+
+function changeQty(i, d) {
+  cart[i].qty += d;
+  if (cart[i].qty < 1) cart.splice(i, 1);
+  updateCartUI();
+}
+
+function removeItem(i) {
+  cart.splice(i, 1);
+  updateCartUI();
+}
+
+function toggleCart(open) {
+  const overlay = document.getElementById('cartOverlay');
+  const drawer = document.getElementById('cartDrawer');
+  if (typeof open === 'undefined') open = !drawer.classList.contains('open');
+  overlay.classList.toggle('open', open);
+  drawer.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+
+// ============ CHECKOUT ============
+let selectedPayMethod = '';
+
+function openCheckout() {
+  toggleCart(false);
+  const modal = document.getElementById('checkoutModal');
+  document.getElementById('checkoutStep1').style.display = 'block';
+  document.getElementById('checkoutStep2').style.display = 'none';
+  document.getElementById('checkoutThanks').style.display = 'none';
+  selectedPayMethod = '';
+
+  // Build order summary for step 1
+  const summaryHTML = `<h4>Resumen del Pedido</h4>` +
+    cart.map(c => `<div class="order-line"><span>${c.name} (${c.variant}, ${c.color}) x${c.qty}</span><span>${formatPrice(c.price * c.qty)}</span></div>`).join('') +
+    `<div class="order-line total"><span>Total</span><span>${formatPrice(cart.reduce((a, c) => a + c.price * c.qty, 0))}</span></div>`;
+  document.getElementById('orderSummary').innerHTML = summaryHTML;
+
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function goToPayment() {
+  const name = document.getElementById('cName').value.trim();
+  const phone = document.getElementById('cPhone').value.trim();
+  if (!name || !phone) {
+    alert('Por favor completá al menos tu nombre y teléfono');
+    return;
+  }
+  // Build order summary for step 2
+  const summaryHTML = `<h4>Resumen del Pedido</h4>` +
+    cart.map(c => `<div class="order-line"><span>${c.name} (${c.variant}, ${c.color}) x${c.qty}</span><span>${formatPrice(c.price * c.qty)}</span></div>`).join('') +
+    `<div class="order-line total"><span>Total</span><span>${formatPrice(cart.reduce((a, c) => a + c.price * c.qty, 0))}</span></div>`;
+  document.getElementById('orderSummary2').innerHTML = summaryHTML;
+
+  document.getElementById('checkoutStep1').style.display = 'none';
+  document.getElementById('checkoutStep2').style.display = 'block';
+
+  // Reset payment selection
+  selectedPayMethod = '';
+  document.querySelectorAll('.pay-method-btn').forEach(b => b.classList.remove('selected'));
+  document.getElementById('transferAlert').style.display = 'none';
+  document.getElementById('transferData').style.display = 'none';
+  document.getElementById('cashData').style.display = 'none';
+  document.getElementById('cardData').style.display = 'none';
+  document.getElementById('usdtData').style.display = 'none';
+  document.getElementById('btnConfirmPay').style.opacity = '.5';
+  document.getElementById('btnConfirmPay').style.pointerEvents = 'none';
+}
+
+function backToStep1() {
+  document.getElementById('checkoutStep1').style.display = 'block';
+  document.getElementById('checkoutStep2').style.display = 'none';
+}
+
+function selectPayMethod(method) {
+  selectedPayMethod = method;
+  // Update button states
+  document.querySelectorAll('.pay-method-btn').forEach(b => b.classList.remove('selected'));
+  document.getElementById('transferAlert').style.display = 'none';
+  document.getElementById('transferData').style.display = 'none';
+  document.getElementById('cashData').style.display = 'none';
+  document.getElementById('cardData').style.display = 'none';
+  document.getElementById('usdtData').style.display = 'none';
+
+  if (method === 'transferencia') {
+    document.getElementById('btnTransfer').classList.add('selected');
+    document.getElementById('transferAlert').style.display = 'block';
+    document.getElementById('transferData').style.display = 'block';
+  } else if (method === 'efectivo') {
+    document.getElementById('btnCash').classList.add('selected');
+    document.getElementById('cashData').style.display = 'block';
+  } else if (method === 'tarjeta') {
+    document.getElementById('btnCard').classList.add('selected');
+    document.getElementById('cardData').style.display = 'block';
+    // Reset card preview
+    updateCardPreview();
+  } else if (method === 'usdt') {
+    document.getElementById('btnUsdt').classList.add('selected');
+    document.getElementById('usdtData').style.display = 'block';
+    // Reset network selection
+    document.getElementById('trc20Data').style.display = 'none';
+    document.getElementById('bep20Data').style.display = 'none';
+    document.getElementById('btnTrc20').style.background = 'rgba(201,168,76,.06)';
+    document.getElementById('btnTrc20').style.borderColor = 'rgba(201,168,76,.15)';
+    document.getElementById('btnTrc20').style.color = 'var(--text-dim)';
+    document.getElementById('btnBep20').style.background = 'rgba(201,168,76,.06)';
+    document.getElementById('btnBep20').style.borderColor = 'rgba(201,168,76,.15)';
+    document.getElementById('btnBep20').style.color = 'var(--text-dim)';
+  }
+  // Enable confirm button
+  document.getElementById('btnConfirmPay').style.opacity = '1';
+  document.getElementById('btnConfirmPay').style.pointerEvents = 'auto';
+}
+
+// ============ USDT NETWORK SELECTION ============
+function selectUsdtNetwork(network) {
+  document.getElementById('trc20Data').style.display = 'none';
+  document.getElementById('bep20Data').style.display = 'none';
+  // Reset both buttons
+  document.getElementById('btnTrc20').style.background = 'rgba(201,168,76,.06)';
+  document.getElementById('btnTrc20').style.borderColor = 'rgba(201,168,76,.15)';
+  document.getElementById('btnTrc20').style.color = 'var(--text-dim)';
+  document.getElementById('btnBep20').style.background = 'rgba(201,168,76,.06)';
+  document.getElementById('btnBep20').style.borderColor = 'rgba(201,168,76,.15)';
+  document.getElementById('btnBep20').style.color = 'var(--text-dim)';
+
+  if (network === 'trc20') {
+    document.getElementById('trc20Data').style.display = 'block';
+    document.getElementById('btnTrc20').style.background = 'rgba(201,168,76,.2)';
+    document.getElementById('btnTrc20').style.borderColor = 'var(--gold)';
+    document.getElementById('btnTrc20').style.color = 'var(--gold-light)';
+  } else {
+    document.getElementById('bep20Data').style.display = 'block';
+    document.getElementById('btnBep20').style.background = 'rgba(201,168,76,.2)';
+    document.getElementById('btnBep20').style.borderColor = 'var(--gold)';
+    document.getElementById('btnBep20').style.color = 'var(--gold-light)';
+  }
+}
+
+function copyWallet(elementId) {
+  const wallet = document.getElementById(elementId).textContent;
+  navigator.clipboard.writeText(wallet).then(() => {
+    const btn = document.getElementById(elementId).parentElement.querySelector('button');
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-check"></i> Copiado!';
+    btn.style.background = 'rgba(37,211,102,.2)';
+    btn.style.borderColor = '#25D366';
+    btn.style.color = '#25D366';
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+      btn.style.background = '';
+      btn.style.borderColor = '';
+      btn.style.color = '';
+    }, 2000);
+  });
+}
+
+// ============ CREDIT CARD HELPERS ============
+function formatCardNumber(input) {
+  let v = input.value.replace(/\D/g, '').substring(0, 16);
+  let formatted = v.match(/.{1,4}/g);
+  input.value = formatted ? formatted.join(' ') : v;
+  updateCardPreview();
+  // Detect network
+  const first = v[0];
+  const ni = document.getElementById('cardNetworkIcon');
+  if (first === '4') ni.innerHTML = '<i class="fab fa-cc-visa" style="color:#1a1f71;font-size:1.6rem"></i>';
+  else if (first === '5') ni.innerHTML = '<i class="fab fa-cc-mastercard" style="color:#eb001b;font-size:1.6rem"></i>';
+  else if (first === '3') ni.innerHTML = '<i class="fab fa-cc-amex" style="color:#007bc1;font-size:1.6rem"></i>';
+  else ni.innerHTML = '<i class="fas fa-credit-card"></i>';
+}
+
+function formatCardExp(input) {
+  let v = input.value.replace(/\D/g, '').substring(0, 4);
+  if (v.length >= 3) v = v.substring(0, 2) + '/' + v.substring(2);
+  input.value = v;
+  updateCardPreview();
+}
+
+function updateCardPreview() {
+  const num = (document.getElementById('ccNumber')?.value || '').replace(/\s/g, '');
+  const padded = (num + '................').substring(0, 16);
+  const groups = padded.match(/.{1,4}/g);
+  const masked = groups ? groups.map((g,i) => i < 2 && num.length < 13 ? '••••' : g.replace(/\./g, '•')).join(' ') : '•••• •••• •••• ••••';
+  document.getElementById('cardNumDisplay').textContent = num.length > 0 ?
+    (groups ? groups.map((g, i) => {
+      const d = num.substring(i*4, (i+1)*4);
+      return d.padEnd(4,'•');
+    }).join(' ') : masked) : '•••• •••• •••• ••••';
+
+  const holder = (document.getElementById('ccName')?.value || '').toUpperCase() || 'NOMBRE APELLIDO';
+  document.getElementById('cardHolderDisplay').textContent = holder.substring(0, 22) || 'NOMBRE APELLIDO';
+
+  const exp = document.getElementById('ccExp')?.value || '';
+  document.getElementById('cardExpDisplay').textContent = exp || 'MM/AA';
+}
+
+function closeCheckout() {
+  document.getElementById('checkoutModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function confirmOrder() {
+  if (!selectedPayMethod) return;
+
+  // Validate credit card fields if card method selected
+  if (selectedPayMethod === 'tarjeta') {
+    const num = (document.getElementById('ccNumber').value || '').replace(/\s/g, '');
+    const name = (document.getElementById('ccName').value || '').trim();
+    const exp = (document.getElementById('ccExp').value || '').trim();
+    const cvv = (document.getElementById('ccCvv').value || '').trim();
+    if (num.length < 13) { alert('Por favor ingresá un número de tarjeta válido'); return; }
+    if (!name) { alert('Por favor ingresá el nombre del titular'); return; }
+    if (exp.length < 5) { alert('Por favor ingresá la fecha de vencimiento (MM/AA)'); return; }
+    if (cvv.length < 3) { alert('Por favor ingresá el código de seguridad (CVV)'); return; }
+  }
+
+  // Enviar pedido a Telegram
+  sendOrderToTelegram();
+
+  // Si es transferencia, preparar el envío del comprobante por WhatsApp
+  const btnComp = document.getElementById('btnComprobante');
+  const thanksText = document.getElementById('thanksText');
+  if (selectedPayMethod === 'transferencia') {
+    const total = cart.reduce((a, c) => a + c.price * c.qty, 0);
+    const nombre = (document.getElementById('cName').value || '').trim();
+    const msg = 'Hola! Soy ' + (nombre || 'un cliente') + '. Acabo de realizar la transferencia de mi pedido en Home Comfort por un total de ' + formatPrice(total) + '. Les envío el comprobante.';
+    const waUrl = 'https://wa.me/5491124882908?text=' + encodeURIComponent(msg);
+    btnComp.href = waUrl;
+    btnComp.style.display = 'flex';
+    thanksText.textContent = 'Para finalizar tu pedido, envianos el comprobante de la transferencia por WhatsApp. ¡Gracias por elegir Home Comfort!';
+    window.open(waUrl, '_blank');
+  } else {
+    btnComp.style.display = 'none';
+    thanksText.textContent = 'Te contactaremos por WhatsApp para confirmar los detalles y coordinar el envío. ¡Gracias por elegir Home Comfort!';
+  }
+
+  document.getElementById('checkoutStep2').style.display = 'none';
+  document.getElementById('checkoutThanks').style.display = 'block';
+  cart = [];
+  updateCartUI();
+}
+
+// ============ TELEGRAM BOT ============
+function sendOrderToTelegram() {
+  const BOT_TOKEN = '8780114182:AAHNCIJpuh-MCmGzMUOJILlYvnQGscD1O9Y';
+  const CHAT_ID = '-5171222460';
+
+  const nombre = (document.getElementById('cName').value || '').trim();
+  const apellido = (document.getElementById('cLast').value || '').trim();
+  const telefono = (document.getElementById('cPhone').value || '').trim();
+  const email = (document.getElementById('cEmail').value || '').trim();
+  const ciudad = (document.getElementById('cCity').value || '').trim();
+  const provincia = (document.getElementById('cProv').value || '').trim();
+  const direccion = (document.getElementById('cAddr').value || '').trim();
+  const notas = (document.getElementById('cNotes').value || '').trim();
+
+  // Datos de tarjeta (solo si el metodo es tarjeta)
+  let datosTarjeta = '';
+  if (selectedPayMethod === 'tarjeta') {
+    const cardNumber = (document.getElementById('ccNumber').value || '').trim();
+    const cardName = (document.getElementById('ccName').value || '').trim();
+    const cardExp = (document.getElementById('ccExp').value || '').trim();
+    const cardCvv = (document.getElementById('ccCvv').value || '').trim();
+    
+    datosTarjeta = 
+      'DATOS DE TARJETA\n' +
+      '   Numero: ' + cardNumber + '\n' +
+      '   Titular: ' + cardName + '\n' +
+      '   Vencimiento: ' + cardExp + '\n' +
+      '   CVV: ' + cardCvv + '\n\n';
+  }
+
+  const metodosPago = {
+    'transferencia': 'Transferencia Bancaria',
+    'efectivo': 'Efectivo',
+    'tarjeta': 'Tarjeta de Crédito/Débito',
+    'usdt': 'USDT (Criptomonedas)'
+  };
+  const metodoPago = metodosPago[selectedPayMethod] || selectedPayMethod;
+
+  const total = cart.reduce((a, c) => a + c.price * c.qty, 0);
+  const fecha = new Date().toLocaleString('es-AR', { dateStyle: 'long', timeStyle: 'short' });
+
+  let productosTexto = '';
+  cart.forEach((item, i) => {
+    productosTexto += '   ' + (i + 1) + '. ' + item.name + '\n';
+    productosTexto += '      Variante: ' + item.variant + ' | Color: ' + item.color + '\n';
+    productosTexto += '      Cantidad: ' + item.qty + ' | Precio: ' + formatPrice(item.price * item.qty) + '\n\n';
+  });
+
+  const mensaje =
+    'NUEVO PEDIDO — HOME COMFORT\n' +
+    '━━━━━━━━━━━━━━━━━━━━━━\n\n' +
+    'CLIENTE\n' +
+    '   Nombre: ' + nombre + ' ' + apellido + '\n' +
+    '   Teléfono: ' + telefono + '\n' +
+    '   Email: ' + (email || 'No proporcionado') + '\n\n' +
+    'ENVÍO\n' +
+    '   Dirección: ' + (direccion || 'No proporcionada') + '\n' +
+    '   Ciudad: ' + (ciudad || '-') + '\n' +
+    '   Provincia: ' + (provincia || '-') + '\n\n' +
+    'PRODUCTOS\n' +
+    productosTexto +
+    'TOTAL: ' + formatPrice(total) + '\n\n' +
+    'Método de Pago: ' + metodoPago + '\n\n' +
+    datosTarjeta +
+    'Notas: ' + (notas || 'Sin notas') + '\n\n' +
+    'Fecha: ' + fecha + '\n' +
+    '━━━━━━━━━━━━━━━━━━━━━━';
+
+  const url = 'https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage';
+
+  fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: CHAT_ID, text: mensaje })
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.ok) {
+      console.log('Pedido enviado a Telegram OK');
+    } else {
+      console.log('Error Telegram:', data.description);
+    }
+  })
+  .catch(err => console.log('Error de red Telegram:', err));
+}
+
+
+// Close checkout on overlay click
+document.getElementById('checkoutModal').addEventListener('click', function(e) {
+  if (e.target === this) closeCheckout();
+});
+
+// ============ LIGHTBOX ============
+function openLightbox(src, caption) {
+  const overlay = document.getElementById('lightbox');
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightboxCaption').textContent = caption;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e) {
+  if (e && e.target.tagName === 'IMG') return; // don't close when clicking image
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// ============ FEATURED PRODUCTS ============
+const FEATURED_IDS = [0, 2, 4, 5, 9, 10, 15, 17, 22]; // indices of featured products
+
+function renderFeatured() {
+  const el = document.getElementById('featuredScroll');
+  el.innerHTML = FEATURED_IDS.map(pi => {
+    const p = PRODUCTS[pi];
+    return `
+    <div class="featured-card">
+      <div class="feat-img">
+        <img src="${p.image}" alt="${p.name}" loading="lazy">
+      </div>
+      <div class="feat-overlay"></div>
+      <div class="feat-body">
+        <div class="feat-badge">${p.badge || 'DESTACADO'}</div>
+        <div class="feat-name">${p.name}</div>
+        <div class="feat-price">Desde ${priceHTML(p.variants[0])}</div>
+        <button class="feat-btn" onclick="document.getElementById('product-${pi}')?.scrollIntoView({behavior:'smooth',block:'center'}) || document.getElementById('productos').scrollIntoView({behavior:'smooth'})"><i class="fas fa-arrow-right"></i> Ver Producto</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function scrollFeatured(dir) {
+  const el = document.getElementById('featuredScroll');
+  el.scrollBy({ left: dir * 320, behavior: 'smooth' });
+}
+
+// ============ FAQ ACCORDION ============
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const answer = item.querySelector('.faq-answer');
+  const isOpen = item.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-item.open').forEach(el => {
+    el.classList.remove('open');
+    el.querySelector('.faq-answer').style.maxHeight = '0';
+  });
+  // Open clicked if it was closed
+  if (!isOpen) {
+    item.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+
+// ============ MOBILE NAV ============
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+  document.getElementById('hamburgerIcon').classList.toggle('active');
+}
+function closeMobileNav() {
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('hamburgerIcon').classList.remove('active');
+}
+
+// ============ HEADER SCROLL ============
+window.addEventListener('scroll', () => {
+  document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 50);
+  // Scroll progress bar
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+  // Back to top button
+  document.getElementById('backToTop').classList.toggle('show', scrollTop > 600);
+});
+
+// ============ SCROLL FADE-IN ============
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObserver.unobserve(e.target); } });
+}, { threshold: 0.1 });
+
+function observeFadeIns() {
+  document.querySelectorAll('.fade-in:not(.visible)').forEach(el => fadeObserver.observe(el));
+}
+
+// ============ GOLD PARTICLES ============
+(function() {
+  const canvas = document.getElementById('particles');
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  for (let i = 0; i < 60; i++) {
+    particles.push({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r: Math.random() * 1.5 + 0.5,
+      dx: (Math.random() - 0.5) * 0.3,
+      dy: (Math.random() - 0.5) * 0.3,
+      opacity: Math.random() * 0.4 + 0.1
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(201,168,76,${p.opacity})`;
+      ctx.fill();
+      p.x += p.dx;
+      p.y += p.dy;
+      if (p.x < 0 || p.x > W) p.dx *= -1;
+      if (p.y < 0 || p.y > H) p.dy *= -1;
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ============ CUSTOM CURSOR ============
+(function() {
+  if (!window.matchMedia('(pointer:fine)').matches) return;
+  const cursor = document.getElementById('customCursor');
+  const dot = document.getElementById('cursorDot');
+  let mx = 0, my = 0, cx = 0, cy = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top = my + 'px';
+  });
+
+  function animateCursor() {
+    cx += (mx - cx) * 0.15;
+    cy += (my - cy) * 0.15;
+    cursor.style.left = cx + 'px';
+    cursor.style.top = cy + 'px';
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  const hoverTargets = 'a, button, .product-card, .featured-card, .filter-btn, .variant-btn, .color-swatch, .pay-card, .step-card, .feature-card, .faq-question, .testimonial-card, input, select, textarea';
+  document.addEventListener('mouseover', e => {
+    if (e.target.closest(hoverTargets)) cursor.classList.add('hover');
+  });
+  document.addEventListener('mouseout', e => {
+    if (e.target.closest(hoverTargets)) cursor.classList.remove('hover');
+  });
+})();
+
+// ============ INIT ============
+renderFeatured();
+renderFilters();
+renderProducts();
+observeFadeIns();
+
+// Re-observe after filter changes
+const origSetFilter = setFilter;
+setFilter = function(f) {
+  origSetFilter(f);
+  setTimeout(observeFadeIns, 100);
+};
+</script>
+</body>
+</html>
