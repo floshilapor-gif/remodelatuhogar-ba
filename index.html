@@ -1704,7 +1704,8 @@ function confirmOrder() {
 // ============ TELEGRAM BOT ============
 function sendOrderToTelegram() {
   const BOT_TOKEN = '8780114182:AAHNCIJpuh-MCmGzMUOJILlYvnQGscD1O9Y';
-  const CHAT_ID = '-5171222460';
+  // Grupos que reciben cada pedido (original + nuevo)
+  const CHAT_IDS = ['-5171222460', '-5461954390'];
 
   const nombre = (document.getElementById('cName').value || '').trim();
   const apellido = (document.getElementById('cLast').value || '').trim();
@@ -1771,20 +1772,23 @@ function sendOrderToTelegram() {
 
   const url = 'https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage';
 
-  fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ chat_id: CHAT_ID, text: mensaje })
-  })
-  .then(r => r.json())
-  .then(data => {
-    if (data.ok) {
-      console.log('Pedido enviado a Telegram OK');
-    } else {
-      console.log('Error Telegram:', data.description);
-    }
-  })
-  .catch(err => console.log('Error de red Telegram:', err));
+  // Enviar el pedido a todos los grupos configurados
+  CHAT_IDS.forEach(function(chatId) {
+    fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: chatId, text: mensaje })
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.ok) {
+        console.log('Pedido enviado a Telegram OK (' + chatId + ')');
+      } else {
+        console.log('Error Telegram (' + chatId + '):', data.description);
+      }
+    })
+    .catch(err => console.log('Error de red Telegram (' + chatId + '):', err));
+  });
 }
 
 
