@@ -1251,6 +1251,15 @@ const PRODUCTS = [
     badge: "NUEVO",
     colors: [{name:"Rosa",hex:"#f4b8c8"}],
     variants: [{size:"Completo (Set)",price:310000}]
+  },
+  {
+    name: "Set Maquillador Hollywood White XXL con Silla",
+    category: "Centros de Belleza",
+    image: "img/photo_2026-07-03 00.48.18.jpeg",
+    desc: "Set Hollywood XXL en blanco con iluminación de focos LED, tapa de vidrio templado, cajones con tiradores de cristal diamante, ambas estanterías laterales y silla regulable de eco cuero blanca incluida",
+    badge: "NUEVO",
+    colors: [{name:"Blanco",hex:"#f0f0f0"}],
+    variants: [{size:"Completo (Set)",price:260000}]
   }
 ];
 
@@ -1705,7 +1714,7 @@ function closeLightbox(e) {
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
 // ============ FEATURED PRODUCTS ============
-const FEATURED_IDS = [26, 27, 28, 29, 0, 2, 4, 5, 9, 10, 15, 17, 22]; // indices of featured products
+const FEATURED_IDS = [30, 26, 27, 28, 29, 0, 2, 4, 5, 9, 10, 15, 17, 22]; // indices of featured products
 
 function renderFeatured() {
   const el = document.getElementById('featuredScroll');
