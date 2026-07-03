@@ -1251,6 +1251,15 @@ const PRODUCTS = [
     badge: "NUEVO",
     colors: [{name:"Blanco",hex:"#f0f0f0"}],
     variants: [{size:"Completo (Set)",price:260000}]
+  },
+  {
+    name: "Set Maquillador Hollywood India",
+    category: "Centros de Belleza",
+    image: "img/photo_2026-07-03 00.58.05.jpeg",
+    desc: "Maquillador Hollywood India con frente espejado, gran espejo con iluminación LED integral y sistema touch, tapa de vidrio, cajones espejados con tiradores de cristal diamante y ambas estanterías laterales flotantes",
+    badge: "NUEVO",
+    colors: [{name:"Espejado",hex:"#d8dde3"}],
+    variants: [{size:"Completo (Set)",price:268000}]
   }
 ];
 
@@ -1705,7 +1714,7 @@ function closeLightbox(e) {
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
 // ============ FEATURED PRODUCTS ============
-const FEATURED_IDS = [29, 25, 26, 27, 28, 0, 1, 3, 4, 8, 9, 14, 16, 21]; // indices of featured products
+const FEATURED_IDS = [30, 29, 25, 26, 27, 28, 0, 1, 3, 4, 8, 9, 14, 16, 21]; // indices of featured products
 
 function renderFeatured() {
   const el = document.getElementById('featuredScroll');
