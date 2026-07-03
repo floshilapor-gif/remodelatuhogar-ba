@@ -941,9 +941,9 @@ img{max-width:100%;display:block}
       <div id="transferData" style="display:none;margin-top:1rem">
         <div style="background:var(--bg3);border:1px solid rgba(206,214,226,.15);border-radius:var(--radius-sm);padding:1.2rem">
           <h4 style="font-size:.9rem;font-weight:700;color:var(--gold-light);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem"><i class="fas fa-building-columns"></i> Datos para Transferencia</h4>
-          <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:.4rem"><strong style="color:var(--text)">CBU:</strong> <span id="bankCbu">0000077200132507239983</span></p>
-          <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:.4rem"><strong style="color:var(--text)">Alias:</strong> <span id="bankAlias">Lucia.reynaga10</span></p>
-          <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:0"><strong style="color:var(--text)">A nombre de:</strong> <span id="bankTitular">Gisela Lucia Reynaga</span></p>
+          <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:.4rem"><strong style="color:var(--text)">CBU:</strong> <span id="bankCbu">0000085700203576313602</span></p>
+          <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:.4rem"><strong style="color:var(--text)">Alias:</strong> <span id="bankAlias">igomez.mp10</span></p>
+          <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:0"><strong style="color:var(--text)">A nombre de:</strong> <span id="bankTitular">Isaías Ezequiel Gómez</span></p>
           <div style="margin-top:1rem;padding-top:.8rem;border-top:1px solid rgba(206,214,226,.1)">
             <p style="font-size:.8rem;color:var(--text-muted);line-height:1.6;margin:0"><i class="fas fa-info-circle" style="color:var(--gold);margin-right:.3rem"></i> Una vez realizada la transferencia, enviá el comprobante por WhatsApp para confirmar tu pedido.</p>
           </div>
@@ -1794,21 +1794,6 @@ setFilter = function(f) {
 };
 </script>
 
-<!-- Datos bancarios dinámicos: se leen del panel de administración (Cloudflare Worker) -->
-<script>
-(function(){
-  var WORKER_URL = "https://home-comfort-admin.pazgenaro46.workers.dev";
-  fetch(WORKER_URL + "/api/bank", { cache: "no-store" })
-    .then(function(r){ return r.ok ? r.json() : null; })
-    .then(function(d){
-      if(!d) return;
-      var set = function(id, val){ var el = document.getElementById(id); if(el && val) el.textContent = val; };
-      set("bankCbu", d.cbu);
-      set("bankAlias", d.alias);
-      set("bankTitular", d.titular);
-    })
-    .catch(function(){ /* si el panel no responde, quedan los valores por defecto del HTML */ });
-})();
-</script>
+<!-- Datos bancarios fijos (definidos directamente en el HTML de arriba) -->
 </body>
 </html>
