@@ -1467,6 +1467,21 @@ function toggleCart(open) {
 // ============ CHECKOUT ============
 let selectedPayMethod = '';
 
+// Datos bancarios: se traen del panel de administración (admin.html) para que
+// el CBU/Alias que ve el cliente esté siempre actualizado sin tocar el código.
+const BANK_WORKER_URL = "https://remodelatuhogar-admin.floshilapor.workers.dev";
+function loadBankData() {
+  fetch(BANK_WORKER_URL + "/api/bank", { cache: "no-store" })
+    .then(r => r.json())
+    .then(d => {
+      if (d.cbu) document.getElementById('bankCbu').textContent = d.cbu;
+      if (d.alias) document.getElementById('bankAlias').textContent = d.alias;
+      if (d.titular) document.getElementById('bankTitular').textContent = d.titular;
+    })
+    .catch(() => {}); // si falla, quedan los valores por defecto del HTML
+}
+loadBankData();
+
 function openCheckout() {
   toggleCart(false);
   const modal = document.getElementById('checkoutModal');
