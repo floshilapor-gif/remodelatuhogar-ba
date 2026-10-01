@@ -1,8 +1,9 @@
 # Configuración local de Claude Code
 .claude/
 
-# Backend (Cloudflare Worker) — se despliega aparte, no en GitHub Pages
+# Backend (Cloudflare Worker/Pages) — se despliega aparte, no en GitHub Pages
 cf-worker/
+cf-pages/
 
 # Archivos del sistema
 .DS_Store

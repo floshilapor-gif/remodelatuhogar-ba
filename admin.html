@@ -93,6 +93,12 @@ input::placeholder{color:var(--text-muted)}
       <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:.4rem">Editá los datos para transferencia que ven los clientes en el checkout:</p>
       <div class="divider"></div>
 
+      <label for="titular">Titular de la cuenta</label>
+      <input id="titular" type="text" maxlength="60" placeholder="Nombre y apellido">
+
+      <label for="cuit">CUIT / CUIL</label>
+      <input id="cuit" type="text" inputmode="numeric" maxlength="11" placeholder="11 dígitos">
+
       <label for="cbu">CBU / CVU</label>
       <input id="cbu" type="text" inputmode="numeric" maxlength="22" placeholder="22 dígitos">
       <div class="field-note" id="cbuNote"></div>
@@ -100,8 +106,8 @@ input::placeholder{color:var(--text-muted)}
       <label for="alias">Alias</label>
       <input id="alias" type="text" maxlength="20" placeholder="mi.alias.banco">
 
-      <label for="titular">Titular de la cuenta</label>
-      <input id="titular" type="text" maxlength="60" placeholder="Nombre y apellido">
+      <label for="banco">Entidad bancaria</label>
+      <input id="banco" type="text" maxlength="60" placeholder="Ej: Banco Macro">
 
       <button type="submit" class="btn" id="saveBtn">Guardar cambios</button>
       <button type="button" class="btn-ghost" id="logoutBtn">Cerrar sesión</button>
@@ -113,7 +119,7 @@ input::placeholder{color:var(--text-muted)}
 <script>
 (function(){
   "use strict";
-  var WORKER_URL = "https://remodelatuhogar-admin.floshilapor.workers.dev";
+  var WORKER_URL = "https://remodelatuhogar-api.pages.dev";
   var TOKEN_KEY = "hc_admin_token";
 
   var $ = function(id){ return document.getElementById(id); };
@@ -137,13 +143,16 @@ input::placeholder{color:var(--text-muted)}
     else { p.type = "password"; this.textContent = "VER"; }
   });
 
-  // --- validación de CBU en vivo ---
+  // --- validación de CBU/CUIT en vivo ---
   $("cbu").addEventListener("input", function(){
     this.value = this.value.replace(/\D/g, "").slice(0,22);
     var note = $("cbuNote");
     if(this.value.length === 0){ note.textContent = ""; note.style.color = "var(--gold)"; }
     else if(this.value.length < 22){ note.textContent = this.value.length + "/22 dígitos"; note.style.color = "var(--text-muted)"; }
     else { note.textContent = "✓ 22 dígitos"; note.style.color = "var(--ok)"; }
+  });
+  $("cuit").addEventListener("input", function(){
+    this.value = this.value.replace(/\D/g, "").slice(0,11);
   });
 
   // --- vistas ---
@@ -165,6 +174,8 @@ input::placeholder{color:var(--text-muted)}
         $("cbu").value = d.cbu || "";
         $("alias").value = d.alias || "";
         $("titular").value = d.titular || "";
+        $("cuit").value = d.cuit || "";
+        $("banco").value = d.banco || "";
         $("cbu").dispatchEvent(new Event("input"));
         if(d.updatedAt){
           $("updated").textContent = "Última actualización: " + new Date(d.updatedAt).toLocaleString("es-AR");
@@ -203,16 +214,18 @@ input::placeholder{color:var(--text-muted)}
     e.preventDefault();
     hideMsg(editorMsg);
     var cbu = $("cbu").value.trim(), alias = $("alias").value.trim(), titular = $("titular").value.trim();
+    var cuit = $("cuit").value.trim(), banco = $("banco").value.trim();
     if(!/^\d{22}$/.test(cbu)){ showMsg(editorMsg, "El CBU debe tener exactamente 22 dígitos.", "err"); return; }
     if(alias.length < 6){ showMsg(editorMsg, "El alias debe tener al menos 6 caracteres.", "err"); return; }
     if(titular.length < 3){ showMsg(editorMsg, "Ingresá el nombre del titular.", "err"); return; }
+    if(cuit && !/^\d{11}$/.test(cuit)){ showMsg(editorMsg, "El CUIT/CUIL debe tener 11 dígitos.", "err"); return; }
 
     var btn = $("saveBtn");
     btn.disabled = true; btn.textContent = "Guardando…";
     fetch(WORKER_URL + "/api/bank", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Authorization": "Bearer " + getToken() },
-      body: JSON.stringify({ cbu: cbu, alias: alias, titular: titular })
+      body: JSON.stringify({ cbu: cbu, alias: alias, titular: titular, cuit: cuit, banco: banco })
     })
     .then(function(r){ return r.json().then(function(d){ return { status: r.status, body: d }; }); })
     .then(function(res){
