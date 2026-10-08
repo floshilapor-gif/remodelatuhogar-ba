@@ -296,6 +296,17 @@ img{max-width:100%;display:block}
 .testimonial-stars{color:var(--gold-light);margin-bottom:.8rem;font-size:.9rem;letter-spacing:2px}
 .testimonial-text{color:var(--text-dim);font-size:.9rem;line-height:1.8;font-style:italic}
 
+/*========== REFERENCIAS ==========*/
+.referencias-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.referencia-card{position:relative;display:block;width:100%;padding:0;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(206,214,226,.12);background:var(--card-bg);cursor:zoom-in;aspect-ratio:9/16;transition:var(--transition);font:inherit;color:inherit}
+.referencia-card:hover{border-color:rgba(206,214,226,.35);transform:translateY(-5px);box-shadow:0 12px 35px rgba(206,214,226,.1)}
+.referencia-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+.referencia-card:hover img{transform:scale(1.04)}
+.referencia-card .ref-zoom{position:absolute;inset:auto 12px 12px auto;width:36px;height:36px;border-radius:50%;background:rgba(10,10,10,.7);border:1px solid rgba(206,214,226,.25);display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:.85rem;opacity:0;transition:opacity .25s ease}
+.referencia-card:hover .ref-zoom{opacity:1}
+@media(max-width:900px){.referencias-grid{grid-template-columns:repeat(3,1fr);gap:.8rem}}
+@media(max-width:640px){.referencias-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto}}
+
 /*========== HOW TO BUY ==========*/
 .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;position:relative}
 .step-card{text-align:center;padding:2rem 1.5rem;background:rgba(206,214,226,.03);border:1px solid rgba(206,214,226,.1);border-radius:var(--radius);position:relative;transition:var(--transition)}
@@ -449,6 +460,7 @@ img{max-width:100%;display:block}
   <a href="#productos" onclick="closeMobileNav()">Productos</a>
   <a href="#como-comprar" onclick="closeMobileNav()">Cómo Comprar</a>
   <a href="#testimonios" onclick="closeMobileNav()">Testimonios</a>
+  <a href="#referencias" onclick="closeMobileNav()">Referencias</a>
   <a href="#faq" onclick="closeMobileNav()">Preguntas Frecuentes</a>
   <a href="#nosotros" onclick="closeMobileNav()">Nosotros</a>
 </div>
@@ -648,6 +660,31 @@ img{max-width:100%;display:block}
         <div class="testimonial-verified"><i class="fas fa-circle-check"></i> Compra verificada</div>
         <div class="testimonial-text">"Le regalé un tocador espejado a mi novia y fue el mejor regalo que le hice. La calidad es premium, los tiradores de cristal le dan un toque increíble. 100% recomendado."</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCIAS -->
+<section class="section" id="referencias">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Clientes reales</div>
+      <h2>Referencias</h2>
+      <p>Mensajes y reseñas de quienes ya transformaron su hogar con nosotros</p>
+    </div>
+    <div class="referencias-grid">
+      <button type="button" class="referencia-card fade-in" onclick="openLightbox('img/resena1.jpg','Referencia de cliente')">
+        <img src="img/resena1.jpg" alt="Referencia de cliente 1" loading="lazy">
+        <span class="ref-zoom" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+      </button>
+      <button type="button" class="referencia-card fade-in" onclick="openLightbox('img/resena2.jpg','Referencia de cliente')">
+        <img src="img/resena2.jpg" alt="Referencia de cliente 2" loading="lazy">
+        <span class="ref-zoom" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+      </button>
+      <button type="button" class="referencia-card fade-in" onclick="openLightbox('img/resena3.jpg','Referencia de cliente')">
+        <img src="img/resena3.jpg" alt="Referencia de cliente 3" loading="lazy">
+        <span class="ref-zoom" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+      </button>
     </div>
   </div>
 </section>
