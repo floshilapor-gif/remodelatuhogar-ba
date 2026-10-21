@@ -297,15 +297,14 @@ img{max-width:100%;display:block}
 .testimonial-text{color:var(--text-dim);font-size:.9rem;line-height:1.8;font-style:italic}
 
 /*========== REFERENCIAS ==========*/
-.referencias-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.referencia-card{position:relative;display:block;width:100%;padding:0;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(206,214,226,.12);background:var(--card-bg);cursor:zoom-in;aspect-ratio:9/16;transition:var(--transition);font:inherit;color:inherit}
+.referencias-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
+.referencia-card{position:relative;display:block;width:100%;padding:0;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(206,214,226,.12);background:var(--card-bg);cursor:zoom-in;transition:var(--transition);font:inherit;color:inherit}
 .referencia-card:hover{border-color:rgba(206,214,226,.35);transform:translateY(-5px);box-shadow:0 12px 35px rgba(206,214,226,.1)}
-.referencia-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+.referencia-card img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block;transition:transform .45s ease;vertical-align:middle}
 .referencia-card:hover img{transform:scale(1.04)}
-.referencia-card .ref-zoom{position:absolute;inset:auto 12px 12px auto;width:36px;height:36px;border-radius:50%;background:rgba(10,10,10,.7);border:1px solid rgba(206,214,226,.25);display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:.85rem;opacity:0;transition:opacity .25s ease}
+.referencia-card .ref-zoom{position:absolute;inset:auto 12px 12px auto;width:36px;height:36px;border-radius:50%;background:rgba(10,10,10,.7);border:1px solid rgba(206,214,226,.25);display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:.85rem;opacity:0;transition:opacity .25s ease;pointer-events:none}
 .referencia-card:hover .ref-zoom{opacity:1}
-@media(max-width:900px){.referencias-grid{grid-template-columns:repeat(3,1fr);gap:.8rem}}
-@media(max-width:640px){.referencias-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto}}
+@media(max-width:640px){.referencias-grid{grid-template-columns:repeat(2,1fr);gap:.8rem}}
 
 /*========== HOW TO BUY ==========*/
 .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;position:relative}
@@ -673,6 +672,34 @@ img{max-width:100%;display:block}
       <p>Mensajes y reseñas de quienes ya transformaron su hogar con nosotros</p>
     </div>
     <div class="referencias-grid">
+      <button type="button" class="referencia-card fade-in" onclick="openLightbox('img/entregaa.jpg','Clientes felices')">
+        <img src="img/entregaa.jpg" alt="Clientes con sus muebles entregados" loading="lazy">
+        <span class="ref-zoom" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+      </button>
+      <button type="button" class="referencia-card fade-in" onclick="openLightbox('img/entregaa2.jpg','Clientes felices')">
+        <img src="img/entregaa2.jpg" alt="Clientes felices con tocadores Hollywood" loading="lazy">
+        <span class="ref-zoom" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+      </button>
+      <button type="button" class="referencia-card fade-in" onclick="openLightbox('img/entregaa3.jpg','Clientes felices')">
+        <img src="img/entregaa3.jpg" alt="Entregas a clientes satisfechos" loading="lazy">
+        <span class="ref-zoom" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+      </button>
+      <button type="button" class="referencia-card fade-in" onclick="openLightbox('img/entregaa4.jpg','Clientes felices')">
+        <img src="img/entregaa4.jpg" alt="Fotos de clientes con sus muebles" loading="lazy">
+        <span class="ref-zoom" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+      </button>
+      <button type="button" class="referencia-card fade-in" onclick="openLightbox('img/entregaa5.jpg','Clientes felices')">
+        <img src="img/entregaa5.jpg" alt="Más clientes felices" loading="lazy">
+        <span class="ref-zoom" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+      </button>
+      <button type="button" class="referencia-card fade-in" onclick="openLightbox('img/entregaa6.jpg','Reseñas de clientes')">
+        <img src="img/entregaa6.jpg" alt="Reseñas de clientes sobre respaldos" loading="lazy">
+        <span class="ref-zoom" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+      </button>
+      <button type="button" class="referencia-card fade-in" onclick="openLightbox('img/entregaa7.jpg','Reseñas de clientes')">
+        <img src="img/entregaa7.jpg" alt="Mensajes de clientas felices" loading="lazy">
+        <span class="ref-zoom" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
+      </button>
       <button type="button" class="referencia-card fade-in" onclick="openLightbox('img/resena1.jpg','Referencia de cliente')">
         <img src="img/resena1.jpg" alt="Referencia de cliente 1" loading="lazy">
         <span class="ref-zoom" aria-hidden="true"><i class="fas fa-search-plus"></i></span>
